@@ -1,0 +1,33 @@
+import Head from 'next/head'
+import Layout from '../components/layout'
+import { getAllTags } from '../lib/posts'
+import { BackToTop } from '../components/back-to-top'
+import { HeroBanner } from '../components/hero-banner'
+
+const Tags = () => {
+
+    return (
+        <Layout>
+            <Head>
+                <title>About - Gauliang</title>
+            </Head>
+
+            <div className="space-y-2 my-16 md:space-y-5 pr-10 py-52 text-center ">
+                <HeroBanner title='About' abstract='暂时，还没想好放什么。' />
+            </div>
+            
+            <BackToTop />
+        </Layout>
+    )
+}
+
+export default Tags
+
+export async function getStaticProps() {
+    const tags = getAllTags()
+    return {
+        props: {
+            tags
+        }
+    }
+}
