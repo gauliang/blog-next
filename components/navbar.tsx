@@ -29,30 +29,33 @@ export default function Navbar(props: ScriptProps) {
     const router = useRouter()
 
     return (
-        <nav className="md:sticky top-0 sm:mx-4 backdrop-blur bg-white/90 border-gray-200 border-b py-5 sm:px-4 dark:bg-gray-800 dark:border-gray-700 z-10">
-            <div className="container flex flex-wrap  flex-col md:flex-row justify-between items-center mx-auto">
-                <Link href={{ pathname: '/' }}>
-                    <div className="flex justify-center text-[#0069ff] dark:text-white cursor-pointer">
-                        {BLOG_LOGO}
-                        <span className="text-xl h-8 ml-2 my-1.5 font-semibold">Gauliang</span>
-                    </div>
-                </Link>
-                <div className="flex flex-col mt-3 md:mt-0 md:flex-row">
-                    <ul className="flex flex-row space-x-2 md:space-x-6">
+        <nav className="md:sticky md:top-0 backdrop-blur md:from-transparent md:to-transparent md:bg-white/80 border-gray-200 border-b py-3 md:py-5  md:px-0 dark:bg-gray-800 dark:border-gray-700 z-10">
+            <div className="md:container md:mx-auto flex flex-wrap flex-col md:flex-row justify-between">
+                <div className="px-5 md:px-0 flex flex-row md:mx-5 justify-between text-[#0069ff] dark:text-white">
+                    <Link href={{ pathname: '/' }}>
+                        <div className="flex flex-row">
+                            {BLOG_LOGO}
+                            <span className="text-xl h-8 ml-2 my-1.5 font-semibold">Gauliang</span>
+                        </div>
+                    </Link>
+                    <div className="md:hidden"><ThemeSwitch /></div>
+                </div>
+                <div className="flex items-center flex-col md:flex-row mt-5 md:mt-0">
+                    <ul className="flex flex-row justify-between space-x-2 md:space-x-6 ">
                         <li key={'首页'}>
                             <Link href={{ pathname: '/' }}>
-                                <a className={`block py-2 pr-4 pl-3 font-semibold ${router.route === '/' ? 'text-blue-500' : ''}`}>首页</a>
+                                <a className={`block py-2 pr-4 pl-3  font-semibold ${router.route === '/' ? 'text-blue-500' : ''}`}>首页</a>
                             </Link>
                         </li>
                         {
                             links.map(link => {
                                 return <li key={link.title}><Link href={{ pathname: link.pathname }}>
-                                    <a className={`block py-2 pr-4 pl-3 font-semibold ${router.route.startsWith(link.pathname) ? 'text-blue-500' : ''}`}>{link.title}</a>
+                                    <a className={`block py-2 pr-4 pl-3 font-semibold ${router.route.startsWith(link.pathname) ? 'text-blue-500 ' : ''}`}>{link.title}</a>
                                 </Link></li>
                             })
                         }
                     </ul>
-                    <ul className="flex-row space-x-6 border-l ml-6 pl-6 hidden md:flex">
+                    <ul className="flex-row space-x-6 border-l dark:border-slate-600 ml-6 pl-6 hidden md:flex">
                         <li>
                             <ThemeSwitch />
                         </li>

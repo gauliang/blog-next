@@ -2,8 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 表格 */
+@media (max-width:767px) {
+    body.standalone{
+        position: relative;
+        padding-top: 40px;
+    }
+    body.standalone::before{
+        content: " ";
+        position: fixed;
+        top:0;
+        height: 60px;
+        width: 100%;
+        color: transparent;
+        background-image: linear-gradient(#aaaaaa88 50%, transparent);
+        
+        z-index: 100;
+    }
+    :root.dark body::before{
+        background-image: linear-gradient(#1f2937 20%,  transparent);
+    }
+}
 
+/* 表格 */
 .table-responsive {
     position: relative;
     overflow-x: hidden;
@@ -16,6 +36,9 @@
     margin-bottom: 2rem;
     z-index: 5;
     width: 100%;
+}
+@media(max-width:767px){
+    .table-responsive{overflow: scroll !important;}
 }
 
 .table-responsive:hover {
@@ -50,13 +73,15 @@
     }
 }
 
-:root.dark .table-responsive{
+:root.dark .table-responsive {
     background-color: transparent;
     border-color: #434e5b;
 }
-:root.dark .table-responsive table>thead>tr>th{
-    border-color:#434e5b ;
+
+:root.dark .table-responsive table>thead>tr>th {
+    border-color: #434e5b;
 }
+
 :root.dark .table-responsive table td {
     border-color: #434e5b66;
 }
@@ -78,6 +103,12 @@
     margin: 0;
     overflow: hidden;
 
+}
+
+@media (max-width:767px) {
+    .remark-highlight pre {
+        overflow: scroll;
+    }
 }
 
 .remark-highlight pre code {
@@ -282,6 +313,7 @@
     background-color: #142030;
     border: 1px solid #142030;
 }
+
 :root.dark .image-widget:hover {
     background-color: #142030;
     border: 1px solid #142030;
@@ -294,18 +326,22 @@
 .TableOfContents a.active {
     color: #0069ff
 }
-.TableOfContents a.active::before{
+
+.TableOfContents a.active::before {
     content: '#';
     position: absolute;
     left: -1em;
 }
 
-:root.dark .TableOfContents a:hover, :root.dark .TableOfContents a.active{
+:root.dark .TableOfContents a:hover,
+:root.dark .TableOfContents a.active {
     transition: all .3s;
     color: white;
 }
 
-:root.dark .TableOfContents {color: #8a9aae;}
+:root.dark .TableOfContents {
+    color: #8a9aae;
+}
 
 /* post-content */
 .post-content {
@@ -339,6 +375,16 @@
 .post-content h5,
 .post-content h6 {
     font-size: 1rem
+}
+
+@media (max-width: 767px) {
+    .post-content h2,
+    .post-content h3 {
+        font-size: 1.25rem
+    }
+    .post-content h4 {
+        font-size: 1rem
+    }
 }
 
 
@@ -428,6 +474,7 @@
     padding-left: .3em;
     position: relative;
     color: #0069ff;
+    word-wrap: break-word;
 }
 
 .post-content a:hover {
@@ -478,6 +525,7 @@
     color: white;
     border-color: #536b90;
 }
+
 :root.dark .next-and-prev-post .next-post:hover,
 :root.dark .next-and-prev-post .prev-post:hover {
     box-shadow: 0 0 0 5px #55669933;
@@ -492,7 +540,7 @@
 }
 
 /* All Posts*/
-:root.dark .all-post:hover{
+:root.dark .all-post:hover {
     color: white;
     border-color: gray;
     box-shadow: 0 0 0 5px #55669933;

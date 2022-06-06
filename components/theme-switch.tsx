@@ -12,16 +12,16 @@ export function ThemeSwitch() {
 
     const solutions = [
         {
-            name: 'Dark',
-            description: 'Dark',
-            href: '##',
-            icon: BsMoonStars,
-        },
-        {
             name: 'Light',
             description: 'Create your own targeted content',
             href: '##',
             icon: BsSun,
+        },
+        {
+            name: 'Dark',
+            description: 'Dark',
+            href: '##',
+            icon: BsMoonStars,
         },
         {
             name: 'System',
@@ -41,7 +41,7 @@ export function ThemeSwitch() {
             <span className='dark:hidden'><BsSun className='w-5 h-5'/> </span>
             <span className='hidden dark:inline'><BsMoonStars className='w-5 h-5'/></span>
         </Popover.Button>
-        <Popover.Panel className="absolute w-46 left-1/2 -translate-x-1/2 z-10 mt-2 bg-white dark:bg-slate-700 dark:rounded-md">
+        <Popover.Panel className="absolute w-46 -right-3 z-10 mt-2 bg-white text-slate-800 dark:text-slate-300 dark:bg-slate-700 rounded-md dark:rounded-md">
             <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="flex flex-col space-y-2 py-2">
                     {solutions.map((item) => (
