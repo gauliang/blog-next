@@ -19,7 +19,7 @@ const Page = ({ posts, pageSize, total, pageNumber }: Params) => {
             </Head>
 
             <BlogHeader {...{ pageNumber, total }} />
-            <main className='mx-20 '>
+            <main className='mx-5 md:mx-20 '>
                 <PostList posts={posts} />
                 <Pagination {...{ pageSize, total, pageNumber }} />
             </main>

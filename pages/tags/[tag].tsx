@@ -16,10 +16,11 @@ const Page = ({ posts, total, tag }: Params) => {
                 <title>{upperCaseFirst(tag)} - Tags - Gauliang</title>
             </Head>
 
-            <div className="text-center space-y-2 my-16 md:space-y-5 pr-10">
+            <div className="mx-5 md:mx-20 py-8 md:py-16 space-y-2 md:space-y-5">
                 <HeroBanner title={upperCaseFirst(tag)} abstract={`共 ${total} 个`} />
             </div>
-            <main className='mx-20 '>
+
+            <main className='mx-5 md:mx-20 '>
                 <PostList posts={posts} />
             </main>
 

@@ -12,7 +12,7 @@ const Tags = () => {
                 <title>About - Gauliang</title>
             </Head>
 
-            <div className="space-y-2 my-16 md:space-y-5 pr-10 py-52 text-center ">
+            <div className="space-y-2 my-16 md:space-y-5 pr-10 py-20 md:py-52 text-center ">
                 <HeroBanner title='About' abstract='暂时，还没想好放什么。' />
             </div>
             

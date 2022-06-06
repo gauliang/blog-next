@@ -69,7 +69,7 @@ export function BackToTop() {
         <button
             ref={buttonRef}
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="scroll-to-top rounded-full whitespace-nowrap flex space-x-2 flex-row text-xs items-center uppercase py-2 px-5 text-white bg-blue-600 hover:bg-gray-800 transition"
+            className="hidden md:flex scroll-to-top rounded-full whitespace-nowrap space-x-2 flex-row text-xs items-center uppercase py-2 px-5 text-white bg-blue-600 hover:bg-gray-800 transition"
         >
             <BsArrowBarUp className='w-5 h-5' />
             <span>Scroll to top</span>

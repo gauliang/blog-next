@@ -14,7 +14,7 @@ const Post = ({ post, prev, next }: Params) => {
 
     const tags = post.tags && post.tags.map((tag: string) => {
         return <Link key={tag} href={{ pathname: `/tags/${tag}` }}>
-            <a key={tag} className='mx-2 hover:underline'>{tag.toUpperCase()}</a>
+            <a key={tag} className='mr-4 hover:underline'>{tag.toUpperCase()}</a>
         </Link>
     })
 
@@ -48,21 +48,21 @@ const Post = ({ post, prev, next }: Params) => {
                 <title>{post.title} - Gauliang</title>
             </Head>
 
-            <div className='flex flex-row space-x-8'>
-                <div className="basis-1/6 shrink-0 py-20">
+            <div className='mx-5 md:mx-20 flex flex-row md:space-x-8'>
+                <div className="hidden md:block md:basis-1/6 shrink-0 py-20">
                     <div className='sticky top-28'>
                         <div className='uppercase text-black dark:text-white font-bold'>Contents</div>
                         <PostContentToc toc={post.toc} />
                     </div>
                 </div>
-                <div className="basis-2/3 w-1">
-                    <div className='mb-12  border-gray-200 py-20'>
+                <div className="basis-3/3 md:basis-2/3 lg:basis-5/6 w-full md:w-1">
+                    <div className='md:mb-12 border-gray-200 py-8 md:py-20'>
                         <div className="flex space-x-2 items-center text-sm font-light text-gray-600 dark:text-gray-400">
                             <BsInfoCircle />
                             <div>阅读全文约需 3 分钟</div>
                             <div className="grow"></div>
                         </div>
-                        <h1 className='text-5xl mt-8 mb-8 leading-tight subpixel-antialiased font-semibold'>{post.title}</h1>
+                        <h1 className='text-2xl md:text-5xl my-4 md:my-8 leading-tight subpixel-antialiased font-semibold'>{post.title}</h1>
                         <div className='text-sm text-gray-600 dark:text-gray-400 font-light flex items-center space-x-2'>
                             <time>{dayjs(post.date).format('YYYY-MM-DD HH:mm:ss')}</time>
                             <span>By</span>
@@ -72,9 +72,9 @@ const Post = ({ post, prev, next }: Params) => {
 
                     <PostContentArticle contentHtml={post.contentHtml} />
 
-                    <div className='flex items-center space-x-2 my-24 pt-8 border-t border-solid border-gray-100 dark:border-gray-600'>
-                        <div className='font-bold text-black text-base dark:text-white'><strong>标签：</strong></div>
-                        <div className='text-blue-600 dark:text-slate-400'>
+                    <div className='flex flex-wrap items-center md:space-x-2 my-24 pt-8 border-t border-solid border-gray-100 dark:border-gray-600'>
+                        <div className='font-bold text-black text-base dark:text-white '><strong>标签：</strong></div>
+                        <div className='text-blue-600 flex text-sm flex-wrap dark:text-slate-400'>
                             {tags}
                         </div>
                     </div>
@@ -84,7 +84,7 @@ const Post = ({ post, prev, next }: Params) => {
                         {nextLink}
                     </div>
                 </div>
-                <div className="basis-1/6  shrink-0 relative"></div>
+                <div className="hidden lg:block md:basis-1/6 shrink-0 relative"></div>
             </div>
 
             <BackToTop />

@@ -23,11 +23,11 @@ const Home: NextPage = ({ posts }: any) => {
                 <title>Gauliang‘s blog</title>
             </Head>
 
-            <div className="mx-20 space-y-2 py-16 md:space-y-5">
+            <div className="mx-5 md:mx-20 py-8 md:py-16 space-y-2 md:space-y-5">
                 <HeroBanner title='大道至简' abstract='天地之所以能长且久者，以其不自生也，故能长生。' />
             </div>
 
-            <main className='mx-20 '>
+            <main className='mx-5 md:mx-20'>
                 <PostList posts={posts} />
                 <Link href={{ pathname: '/posts/page/2' }}>
                     <button className='all-post transition-all border border-solid rounded-full px-8 flex flex-row items-center py-2 space-x-3 hover:px-12 mx-auto my-16 hover:border-blue-600 hover:text-blue-600 dark:border-gray-500 '>

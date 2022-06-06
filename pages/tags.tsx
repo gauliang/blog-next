@@ -6,33 +6,17 @@ import { getAllTags } from '../lib/posts'
 import { BackToTop } from '../components/back-to-top'
 import { HeroBanner } from '../components/hero-banner'
 import Link from 'next/dist/client/link'
-import { BsBoxArrowInUpRight } from 'react-icons/bs'
 
 const Tags = ({ tags, tagsByFirstLetter }: Params) => {
 
-    const list = tags.map((tag: any) => {
-        return (
-            <Link key={tag.name} href={{ pathname: `/tags/${tag.name}` }}>
-                <div className='flex flex-col cursor-pointer p-4 transition-all rounded-md bg-slate-100 hover:bg-blue-500 hover:text-white dark:bg-slate-700 dark:hover:bg-slate-600 relative'>
-                    <span className='flex flex-row justify-between'>
-                        <span className='font-light leading-none opacity-60'>{tag.count}</span>
-                        <span className='opacity-30'><BsBoxArrowInUpRight /></span>
-                    </span>
-                    <span className='opacity-100'>{tag.title}</span>
-
-                </div>
-            </Link>
-        )
-    })
-
     const listByLetter = tagsByFirstLetter.map((item: any) => {
-        return <div key={item.title} className='pb-16'>
-            <h3 className=' text-4xl  text-blue-500'>{item.title}</h3>
+        return <div key={item.title} className='pb-8 md:pb-16'>
+            <h3 className='text-2xl md:text-4xl  text-blue-500'>{item.title}</h3>
             <div className='mt-2'>
                 {item.tags.map((tag: any) => {
                     return <Link key={tag.name} href={{ pathname: `/tags/${tag.name}` }}>
-                        <a className='block mt-3'>
-                            {tag.title} 
+                        <a className='block md:mt-3'>
+                            {tag.title}
                             <span className='opacity-50 text-sm ml-2 align-top'>{tag.count}</span>
                         </a>
                     </Link>
@@ -47,14 +31,13 @@ const Tags = ({ tags, tagsByFirstLetter }: Params) => {
                 <title>Tags - Gauliang</title>
             </Head>
 
-            <div className=" mx-20 space-y-2 py-16 md:space-y-5">
+            <div className="mx-5 md:mx-20 py-8 md:py-16 space-y-2 md:space-y-5">
                 <HeroBanner title='标签' abstract={`共 ${tags.length} 个标签`} />
             </div>
 
-            <main className='mx-20 pb-20'>
-                <div className='columns-5 gap-16 border-t pt-12 dark:border-slate-700'>
+            <main className='mx-5 md:mx-20 pb-20'>
+                <div className='columns-2 md:columns-5 gap-2 md:gap-16 border-t pt-12 dark:border-slate-700'>
                     {listByLetter}
-                    {/* {list} */}
                 </div>
             </main>
             <BackToTop />
@@ -66,7 +49,6 @@ export default Tags
 
 export async function getStaticProps({ params }: Params) {
     const tags = getAllTags()
-
     const _tagsByFirstLetter: any = {}
 
     tags.forEach(item => {
@@ -84,9 +66,6 @@ export async function getStaticProps({ params }: Params) {
     const tagsByFirstLetter = Array.from(Object.keys(_tagsByFirstLetter), k => {
         return _tagsByFirstLetter[k]
     }).sort((a: any, b: any) => { return a.title > b.title ? 0 : -1 })
-
-    console.log(tagsByFirstLetter);
-
 
     return {
         props: {
