@@ -12,11 +12,11 @@ const Series = () => {
                 <title>Series - Gauliang</title>
             </Head>
 
-            <div className="mx-5 md:mx-20 py-8 md:py-16 space-y-2 md:space-y-5">
-                <HeroBanner title='Series' abstract='不经一番寒彻骨，怎得梅花扑鼻香。' />
+            <div className="mx-5 md:mx-20 py-8 md:py-16 space-y-2 md:text-center md:space-y-5 border-b dark:border-slate-700">
+                <HeroBanner title='Series' tag='1 个' abstract='纸上得来终觉浅，绝知此事要躬行。' center />
             </div>
 
-            <main className='pt-16 md:pt-20 flex flex-row md:space-x-12 justify-center pb-20 md:pb-60 border-t dark:border-slate-700'>
+            <main className='pt-16 md:pt-20 flex flex-row md:space-x-12 justify-center pb-20 md:pb-60'>
                 <div className="flex font-sans shadow-xl md:basis-1/2 rounded-md overflow-hidden dark:bg-slate-700">
                     <div className="hidden md:block w-56 relative">
                         <img src="/series/react.jpg" alt="" className="absolute inset-0 w-full h-full object-cover rounded-lg" loading="lazy" />

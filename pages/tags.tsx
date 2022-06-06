@@ -32,7 +32,7 @@ const Tags = ({ tags, tagsByFirstLetter }: Params) => {
             </Head>
 
             <div className="mx-5 md:mx-20 py-8 md:py-16 space-y-2 md:space-y-5">
-                <HeroBanner title='标签' abstract={`共 ${tags.length} 个标签`} />
+                <HeroBanner title='标签' abstract={'海纳百川，有容乃大；壁立千仞，无欲则刚。'} tag={`${tags.length} 个`} />
             </div>
 
             <main className='mx-5 md:mx-20 pb-20'>

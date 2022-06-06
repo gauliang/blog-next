@@ -6,17 +6,23 @@ import { getAllFilesFrontMatter } from '../lib/posts'
 import { BackToTop } from '../components/back-to-top'
 import { PostList } from '../components/post-list'
 import { Pagination } from '../components/post-pagination'
-import { BlogHeader } from '../components/blog-headr'
 import { PAGE_SIZE } from '../lib/config'
+import { HeroBanner } from '../components/hero-banner'
 
 const Post = ({ posts, pageSize, total, pageNumber }: Params) => {
+
+    const blogHeader = pageNumber < 2 ? <div className="mx-5 md:mx-20 py-8 md:py-16 space-y-2 md:space-y-5">
+        <HeroBanner title='博文' abstract={`操千曲⽽后晓声，观千剑⽽后识器。`} tag={`${total} 篇`} />
+    </div> : null
 
     return (
         <Layout>
             <Head>
                 <title>Articles - Gauliang</title>
             </Head>
-            <BlogHeader {...{ pageNumber, total }} />
+            
+            {blogHeader}
+
             <main className='mx-5 md:mx-20'>
                 <PostList posts={posts} />
                 <Pagination {...{ pageSize, total, pageNumber }} />

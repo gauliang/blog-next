@@ -8,9 +8,12 @@ import { PostList } from '../../../components/post-list'
 import { PAGE_SIZE } from '../../../lib/config'
 import { Pagination } from '../../../components/post-pagination'
 import { HeroBanner } from '../../../components/hero-banner'
-import { BlogHeader } from '../../../components/blog-headr'
 
 const Page = ({ posts, pageSize, total, pageNumber }: Params) => {
+    
+    const blogHeader = pageNumber < 2 ? <div className="mx-5 md:mx-20 py-8 md:py-16 space-y-2 md:space-y-5">
+        <HeroBanner title='博闻' abstract={`不积跬步，无以致千里；不积小流，无以成江海。`} />
+    </div> : null
 
     return (
         <Layout>
@@ -18,7 +21,8 @@ const Page = ({ posts, pageSize, total, pageNumber }: Params) => {
                 <title>Articles - Gauliang</title>
             </Head>
 
-            <BlogHeader {...{ pageNumber, total }} />
+            {blogHeader}
+
             <main className='mx-5 md:mx-20 '>
                 <PostList posts={posts} />
                 <Pagination {...{ pageSize, total, pageNumber }} />
