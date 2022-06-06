@@ -33,7 +33,7 @@ function htmlTransform(html: string): string {
 }
 
 export async function getPostData(params: any) {
-
+    
     const { id } = params
     const fullPath = path.join(postDirectory, `${id.join('/')}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8');
