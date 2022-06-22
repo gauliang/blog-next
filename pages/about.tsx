@@ -13,7 +13,7 @@ const Tags = () => {
             </Head>
 
             <div className="mx-5 md:mx-20 py-8 md:py-16 space-y-2 md:space-y-5 border-b dark:border-slate-700">
-                <HeroBanner title='About' abstract='路漫漫其修远兮，吾将上下而求索。' />
+                <HeroBanner title='About' abstract='修身、齐家、治国、平天下。' />
             </div>
 
             <div className="space-y-2 my-16 md:space-y-5 pr-10 py-20 md:py-52 text-center ">
