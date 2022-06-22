@@ -517,6 +517,9 @@
 :root.dark .post-content code {
     color: #d786f2;
 }
+:root.dark .post-content blockquote {
+    background-color: #142030;
+}
 
 /* All Posts*/
 :root.dark .all-post:hover {
@@ -524,3 +527,4 @@
     border-color: gray;
     box-shadow: 0 0 0 5px #55669933;
 }
+

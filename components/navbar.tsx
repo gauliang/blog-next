@@ -41,7 +41,7 @@ export default function Navbar(props: ScriptProps) {
                 </Link>
                 <div className="md:hidden"><ThemeSwitch /></div>
             </div>
-            <div className={`${isPostDetailRoute ? 'hidden' :'md:hidden'} mt-2 border-b -mb-3 divide-gray-400`}></div>
+            <div className={`${isPostDetailRoute ? 'hidden' : 'md:hidden'} mt-2 border-b -mb-3 divide-gray-400 dark:border-gray-700`}></div>
             <div className={`${isPostDetailRoute ? 'hidden md:flex' : 'flex'}  items-center flex-col md:flex-row mt-5 md:mt-0`}>
                 <ul className="flex flex-row justify-between space-x-2 md:space-x-6 ">
                     <li key={'首页'}>
@@ -69,7 +69,7 @@ export default function Navbar(props: ScriptProps) {
                 </ul>
             </div>
             {isPostDetailRoute && <div className="flex px-4 justify-between items-center md:hidden">
-                <Link href={{ pathname: '/' }}><BsChevronLeft /></Link>
+                <Link href={{ pathname: '/' }}><BsChevronLeft className="w-5 h-5" /></Link>
                 <ThemeSwitch />
             </div>}
         </div>
