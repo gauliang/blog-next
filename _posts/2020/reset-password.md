@@ -10,6 +10,8 @@ author: "Gl"
 cover: "password_security_feature.png"     # image name
 ---
 
+![](password_security_feature)
+
 ## 1、MySql 5.7
 
 本节介绍如何重置 MySql 5.7 系统 root 用户密码。

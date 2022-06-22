@@ -10,6 +10,8 @@ author: "Gl"
 cover: "cover.jpg"     # image name
 ---
 
+![](cover.jpg)
+
 ## 一、Kubectl
 
 `kubectl` 是 Kubernetes 的命令行工具，通过它可以对 Kubernetes 集群执行指定的命令。

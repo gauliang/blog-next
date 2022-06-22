@@ -10,6 +10,7 @@ author: "Gl"
 cover: "dive-react-redux.jpg"     # image name
 ---
 
+![深入 Redux](dive-react-redux.jpg)
 要谈论 react-redux 得先从了解 flux 和 redux 开始，flux 本身是一种架构模式，redux 是一个实现了 Flux 架构模式的面向 JS 的通用状态管理器，
 react-redux 提供了一种机制使得我们能够更方便的在 react 中使用 Redux。
 

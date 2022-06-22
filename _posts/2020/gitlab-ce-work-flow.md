@@ -10,6 +10,7 @@ author: "Gauliang"
 cover: Gitlab-1.png     # image name
 ---
 
+![](Gitlab-1\.png)
 本系列文章旨在整理和规范 Gitlab-CE 在团队协作中的最佳应用建议。内容将覆盖工作流规范、CI、CD、WebHooks、ChatOps、Gitlab API、基础运维等。
 
 ## 一、认领 issue

@@ -10,6 +10,8 @@ author: "Gl"
 cover: "cover.jpg"     # image name
 ---
 
+![](cover.jpg)
+
 在 Git 中整合来自不同分支的修改主要有两种方法：**merge** 以及 **rebase**。
 这两种整合方法的最终效果一致，但 rebase 使得提交历史更加整洁。
 在查看一个经过 rebase 的分支历史记录时会发现，尽管实际的开发工作是并行的， 但它们看上去就像是串行的一样，

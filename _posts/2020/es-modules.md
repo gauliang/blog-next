@@ -7,7 +7,7 @@ type: "posts"    # posts | series
 tags: [esm, javascript]
 series: []
 author: "Gl"
-cover: '001.jpg'     # image name
+cover: false     # image name
 ---
 
 ES6 中首次内置了对模块的支持。从理论上讲，ECMAScript 模块应该在所有 JavaScript 环境中通用。实际上，浏览器仍然是ES模块的主要目标。

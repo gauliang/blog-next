@@ -10,6 +10,7 @@ author: "Gauliang"
 cover: "cover.jpg"     # image name
 ---
 
+![](cover.jpg)
 ## 一、基本系统设置
 
 ```bash

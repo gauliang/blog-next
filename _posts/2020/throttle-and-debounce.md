@@ -10,6 +10,7 @@ author: "Gl"
 cover: 'throttle-and-debounce.jpg'     # image name
 ---
 
+![](throttle-and-debounce.jpg)
 ## Throttle
 
 节流是指，确保连续发生的事件（函数调用）按指定频率（时间间隔）触发执行器。
