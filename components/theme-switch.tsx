@@ -2,13 +2,13 @@
 import { useTheme } from 'next-themes'
 
 import { Popover } from '@headlessui/react'
-import { BsClockHistory, BsMoon, BsMoonStars, BsSun } from 'react-icons/bs'
-import { useState } from 'react'
+import { BsClockHistory, BsMoonStars, BsSun } from 'react-icons/bs'
+import { useEffect, useState } from 'react'
 
 export function ThemeSwitch() {
 
     const { setTheme } = useTheme()
-    const [mode, setMode] = useState('system')
+    const [, setMode] = useState('system')
 
     const solutions = [
         {
@@ -34,12 +34,27 @@ export function ThemeSwitch() {
     function setThemeHandler(theme: string) {
         setTheme(theme.toLowerCase())
         setMode(theme)
+        const systemIsDark = window.matchMedia("(prefers-color-scheme:dark)").matches
+        const themeColorMeta = document.querySelector('meta[name="theme-color"]')
+
+        themeColorMeta?.setAttribute('content', theme === 'Light' ? 'white' : theme == 'Dark' ? '#1f2937' : systemIsDark ? '#1f2937' : 'white')
     }
+
+    function systemThemeChangeHandler(event: any) {
+        setThemeHandler(event.matches ? 'Dark' : 'Ligth')
+    }
+
+    useEffect(function () {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', systemThemeChangeHandler)
+        return function () {
+            window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', systemThemeChangeHandler)
+        }
+    }, [])
 
     return <Popover className="relative">
         <Popover.Button className=' flex h-10 flex-row items-center py-2 focus:outline-none text-inherit'>
-            <span className='dark:hidden'><BsSun className='w-5 h-5'/> </span>
-            <span className='hidden dark:inline'><BsMoonStars className='w-5 h-5'/></span>
+            <span className='dark:hidden'><BsSun className='w-5 h-5' /> </span>
+            <span className='hidden dark:inline'><BsMoonStars className='w-5 h-5' /></span>
         </Popover.Button>
         <Popover.Panel className="absolute w-46 -right-3 z-10 mt-2 bg-white text-slate-800 dark:text-slate-300 dark:bg-slate-700 rounded-md dark:rounded-md">
             <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">

@@ -4,11 +4,11 @@ import Footer from "./footer";
 import Navbar from "./navbar";
 
 export default function Layout({ children }: ScriptProps) {
-    useEffect(()=>{
-        if((window as any).navigator.standalone){
+    useEffect(() => {
+        if ((window as any).navigator.standalone) {
             document.body.classList.add('standalone')
         }
-    },[])
+    }, [])
     return (
         <React.Fragment>
             <Navbar></Navbar>
