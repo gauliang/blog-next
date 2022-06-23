@@ -7,14 +7,13 @@ import { HeroBanner } from '../components/hero-banner'
 import Layout from '../components/layout'
 import { PostList } from '../components/post-list'
 import { PAGE_SIZE } from '../lib/snippets'
-import { getAllFilesFrontMatter } from '../lib/posts'
+import { getAllFrontMatterByType } from '../lib/posts'
 
 export async function getStaticProps() {
-    const posts = await getAllFilesFrontMatter().slice(0, PAGE_SIZE)
+    const posts = await getAllFrontMatterByType().slice(0, PAGE_SIZE)
 
     return { props: { posts } }
 }
-
 
 const Home: NextPage = ({ posts }: any) => {
     return (
@@ -29,12 +28,6 @@ const Home: NextPage = ({ posts }: any) => {
 
             <main className='mx-5 md:mx-20'>
                 <PostList posts={posts} />
-                <Link href={{ pathname: '/posts/page/2' }}>
-                    <button className='all-post transition-all border border-solid rounded-full px-8 flex flex-row items-center py-2 space-x-3 hover:px-12 mx-auto my-16 hover:border-blue-600 hover:text-blue-600 dark:border-gray-500 '>
-                        <span>All Posts</span>
-                        <BsArrowRight />
-                    </button>
-                </Link>
             </main>
             <BackToTop />
         </Layout>

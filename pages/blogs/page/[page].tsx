@@ -2,7 +2,7 @@ import { Params } from 'next/dist/server/router'
 import Head from 'next/head'
 
 import Layout from '../../../components/layout'
-import { getAllFilesFrontMatter, getAllPostIds } from '../../../lib/posts'
+import { getAllFrontMatterByType, getAllPostIdByType } from '../../../lib/posts'
 import { BackToTop } from '../../../components/back-to-top'
 import { PostList } from '../../../components/post-list'
 import { PAGE_SIZE } from '../../../lib/snippets'
@@ -38,7 +38,7 @@ export default Page
 
 export async function getStaticProps({ params }: Params) {
 
-    const allPosts = getAllFilesFrontMatter()
+    const allPosts = getAllFrontMatterByType()
     const pageSize = PAGE_SIZE;
     const total = allPosts.length;
     const pageNumber = params.page
@@ -56,7 +56,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-    const totalPosts = getAllPostIds()
+    const totalPosts = getAllPostIdByType()
     const totalPages = Math.ceil(totalPosts.length / PAGE_SIZE)
     const paths = Array.from({ length: totalPages }, (_, i) => {
         return {

@@ -5,7 +5,7 @@ import { parseUrl } from "query-string";
 export function remarkImage(options: any) {
     return function transformer(tree: any, file: any) {
 
-        const prefix = options.perfix.join('/')
+        const prefix = '/' + options.perfix.join('/')
 
         visitParents(tree, 'image', image);
         function image(node: any, parents: any) {
@@ -34,7 +34,7 @@ export function remarkImage(options: any) {
             parent.children = [
                 {
                     ...image,
-                    url: '/posts/' + prefix + '.files/' + image.url
+                    url: prefix + '.files/' + image.url
                 },
                 ...figcaption
             ]

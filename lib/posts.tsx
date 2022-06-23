@@ -14,8 +14,9 @@ import { upperCaseFirst } from 'upper-case-first'
 
 const BASE_URL = path.join(process.cwd(), '_contents')
 
-export function getAllPostIds() {
-    const fileNames = glob.sync(`**/*.md`, { cwd: BASE_URL });
+export function getAllPostIdByType(type='posts') {
+    const fileNames = glob.sync(`**/*.md`, { cwd: BASE_URL + `/${type}` });
+
     return fileNames.map(fileName => {
         return {
             params: {
@@ -31,9 +32,10 @@ function htmlTransform(html: string): string {
     return html
 }
 
-export async function getPostData(params: any) {
+export async function getPostData(id: any) {
 
-    const { id } = params
+    console.log('id',id);
+    
     const fullPath = path.join(BASE_URL, `${id.join('/')}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -61,11 +63,9 @@ export async function getPostData(params: any) {
     };
 }
 
-export function getAllFilesFrontMatter(): any[] {
-    const fileNames = glob.sync(`**/**/*.md`, { cwd: BASE_URL, absolute: true });
-
-    console.log(fileNames);
-    
+export function getAllFrontMatterByType(type = 'all'): any[] {
+    const filter = type === 'all' ? ['posts', 'series'] : [type]
+    const fileNames = glob.sync(`**/*.md`, { cwd: BASE_URL, absolute: true });
 
     const allFrontMatter: any[] = []
 
@@ -75,10 +75,11 @@ export function getAllFilesFrontMatter(): any[] {
         }
         const source = fs.readFileSync(file, 'utf8')
         const { data: frontmatter } = matter(source)
-        if (frontmatter.draft !== true) {
+        if (frontmatter.draft !== true && filter.includes(frontmatter.type)) {
             allFrontMatter.push({
                 ...frontmatter,
-                slug: path.relative(BASE_URL, file).replace(/\.(mdx|md)/, ''),
+                path:(frontmatter.type === 'posts' ? '/blogs/':'/') + path.relative(frontmatter.series ? BASE_URL : BASE_URL + '/posts', file).replace(/\.(mdx|md)/, ''),
+                slug: path.relative(frontmatter.series ? BASE_URL : BASE_URL + '/posts', file).replace(/\.(mdx|md)/, ''),
                 date: frontmatter.date ? new Date(frontmatter.date).getTime() : null,
             })
         }
@@ -87,7 +88,7 @@ export function getAllFilesFrontMatter(): any[] {
 }
 
 export function getAllTags() {
-    const allPosts = getAllFilesFrontMatter()
+    const allPosts = getAllFrontMatterByType('all')
     const data: any = {}
 
     allPosts.forEach(post => {
@@ -113,7 +114,7 @@ export function getAllTags() {
 }
 
 export function getAllSeries() {
-    const allPosts = getAllFilesFrontMatter()
+    const allPosts = getAllFrontMatterByType('series')
     const data: any = {}
 
     series.forEach((s: any) => {
@@ -126,9 +127,7 @@ export function getAllSeries() {
 
     allPosts.reverse()
     allPosts.forEach(post => {
-
         if (post.type === 'series') {
-
             data[post.series].count++
             data[post.series].articles.push(post)
         }

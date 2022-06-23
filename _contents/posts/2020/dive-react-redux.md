@@ -5,7 +5,7 @@ draft: false
 description: "React Redux是React的官方Redux UI绑定库 。 如果您同时使用Redux和React，则还应该使用React Redux绑定这两个库。"
 type: "posts"    # posts | series
 tags: [react,redux,flux,javascript,node.js,redux-toolkit]
-series: [react]
+series: false
 author: "Gl"
 cover: "dive-react-redux.jpg"     # image name
 ---

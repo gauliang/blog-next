@@ -8,8 +8,8 @@ import { ThemeSwitch } from "./theme-switch";
 const links = [
     {
         title: '博客',
-        pathname: '/posts',
-        route: '/posts/[...id]'
+        pathname: '/blogs',
+        route: '/blogs/[...id]'
     },
     {
         title: '标签',
@@ -28,7 +28,7 @@ const links = [
 export default function Navbar(props: ScriptProps) {
 
     const router = useRouter()
-    const isPostDetailRoute = router.pathname == `/posts/[...id]`
+    const isPostDetailRoute = router.pathname == `/blogs/[...id]`
 
     const defaultNav = <nav className={`md:sticky md:top-0 backdrop-blur md:from-transparent md:to-transparent md:bg-white/80 border-gray-200 border-b py-2 md:py-5  md:px-0 dark:bg-gray-800 dark:border-gray-700 z-10`}>
         <div className="md:container md:mx-auto flex flex-wrap flex-col md:flex-row justify-between">

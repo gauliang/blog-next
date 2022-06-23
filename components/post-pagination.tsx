@@ -22,8 +22,8 @@ export function Pagination({ pageSize, total, pageNumber }: Params) {
         <div className='mt-1'><BsArrowRightSquare /></div>
     </a>
 
-    const previous = pageNumber > 1 ? <Link href={{ pathname: `/posts/page/${+pageNumber - 1}` }}>{previousInner}</Link> : previousInner
-    const next = pageNumber < totalPage ? <Link href={{ pathname: `/posts/page/${+pageNumber + 1}` }}>{nextInner}</Link> : nextInner
+    const previous = pageNumber > 1 ? <Link href={{ pathname: `/blogs/page/${+pageNumber - 1}` }}>{previousInner}</Link> : previousInner
+    const next = pageNumber < totalPage ? <Link href={{ pathname: `/blogs/page/${+pageNumber + 1}` }}>{nextInner}</Link> : nextInner
 
     return <nav className=" border-t dark:border-gray-700 mb-20 py-8 flex flex-row justify-between space-x-8 items-center">
         {previous}

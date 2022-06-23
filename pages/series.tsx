@@ -10,7 +10,7 @@ import { getAllSeries } from '../lib/posts'
 const Series = ({ series }: Params) => {
 
     const seriesElements = series.map((item: any) => {
-        return <div className="flex font-sans shadow-xl w-1/2 rounded-md overflow-hidden dark:bg-slate-700">
+        return <div className="flex font-sans shadow-xl lg:w-2/3 xl:w-1/2 rounded-md overflow-hidden dark:bg-slate-700" key={item.name}>
             <div className="hidden md:block w-56 relative">
                 <img src="/series/react.jpg" alt="" className="absolute inset-0 w-full h-full object-cover rounded-lg" loading="lazy" />
             </div>
@@ -26,7 +26,7 @@ const Series = ({ series }: Params) => {
                         </div>
                     </div>
                     <div className="w-full flex-none mt-2 order-1 text-3xl font-bold text-violet-600 dark:text-white">
-                        {item.title}
+                        <Link key={item.name} href={{ pathname: `/series/${item.name}` }}>{item.title}</Link>
                     </div>
                 </div>
                 <div className="flex items-baseline mb-6 pb-6 border-b border-slate-200 dark:border-slate-600"></div>
@@ -59,7 +59,7 @@ const Series = ({ series }: Params) => {
             </Head>
 
             <div className="mx-5 md:mx-20 py-8 md:py-16 space-y-2 md:text-center md:space-y-5 border-b dark:border-slate-700">
-                <HeroBanner title='Series' tag='1 个' abstract='纸上得来终觉浅，绝知此事要躬行。' center />
+                <HeroBanner title='Series' tag={`${series.length} 个`} abstract='纸上得来终觉浅，绝知此事要躬行。' center />
             </div>
             <main className='flex flex-wrap justify-center my-16'>
                 {seriesElements}

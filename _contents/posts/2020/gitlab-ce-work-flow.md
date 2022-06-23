@@ -5,7 +5,7 @@ draft: false
 description: "Gitlab-CE 工作流最佳实践"
 type: "posts"    # posts | series
 tags: ["devops","gitlab"]
-series: ["Gitlab"]
+series: false
 author: "Gauliang"
 cover: Gitlab-1.png     # image name
 ---
