@@ -52,4 +52,5 @@ cd ..
 git add .
 git commit -m "Rebuilding site $(date)"
 git push origin master
+
 ```
