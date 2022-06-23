@@ -34,8 +34,6 @@ function htmlTransform(html: string): string {
 
 export async function getPostData(id: any) {
 
-    console.log('id',id);
-    
     const fullPath = path.join(BASE_URL, `${id.join('/')}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -74,8 +72,10 @@ export function getAllFrontMatterByType(type = 'all'): any[] {
             return
         }
         const source = fs.readFileSync(file, 'utf8')
-        const { data: frontmatter } = matter(source)
-        if (frontmatter.draft !== true && filter.includes(frontmatter.type)) {
+        const { data: frontmatter } = matter(source)        
+        const isDraft = process.env.NODE_ENV==='development' ? false : frontmatter.draft === true
+
+        if (isDraft === false && filter.includes(frontmatter.type)) {
             allFrontMatter.push({
                 ...frontmatter,
                 path:(frontmatter.type === 'posts' ? '/blogs/':'/') + path.relative(frontmatter.series ? BASE_URL : BASE_URL + '/posts', file).replace(/\.(mdx|md)/, ''),
