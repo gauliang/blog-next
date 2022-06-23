@@ -37,6 +37,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ```bash
 npm run build
+npm run export
 
 rm -rf gauliang.github.io/_next/
 cp -rf out/ gauliang.github.io/
