@@ -1,38 +1,40 @@
 const path = require("path")
 const write = require("write")
 const readline = require("readline")
+const { series } = require('../lib/config.json')
 
 const TEMPLATE = `---
-title: "__TITLE__"
-date: __TIME__
-draft: true
-description: ""
-type: "posts"    # posts | series
+title: __title__
+author: GauLiang
+type: __type__
+series: __series__
+date: __time__
 tags: []
-series: []
-author: "Gl"
+description: description
+draft: false
 cover: false     # image name
 ---`
 
 const TIME = new Date()
-const TIME_STR = TIME.toISOString()
+const TYPE_OPTIONS = ['posts', 'series']
 
 async function main() {
-    const SERIES = ['react']
-    const TYPE_PATH = { series: '_series', post: '_posts' }
-    const TYPE_OPTIONS = ['post', 'series']
-    const typeIndex = await readSelectInput({ title: '请选择文章类型：', options: TYPE_OPTIONS })
-
-    let typePath = TYPE_PATH[TYPE_OPTIONS[typeIndex]]
-
-    if (TYPE_OPTIONS[typeIndex] === 'series') {
-        const seriesIndex = await readSelectInput({ title: '请选所属系列：', options: SERIES })
-        typePath = typePath + '/' + SERIES[seriesIndex]
-    } else {
-        typePath += '/' + TIME.getFullYear().toString()
+    const typeIndex = await readSelectInput({ title: '请选择文章归类：', options: TYPE_OPTIONS })
+    const meta = {
+        title: '',
+        type: TYPE_OPTIONS[typeIndex],
+        time: TIME.toISOString(),
+        series: false,
+        dirName: ''
     }
 
-    const title = await readTextInput({
+    if (meta.type === 'series') {
+        const seriesName = series[await readSelectInput({ title: '请选所属系列：', options: series })]
+        meta.series = seriesName
+    }
+
+    meta.dirName = meta.type === 'series' ? `_${meta.type}/${meta.series}` : `_${meta.type}/${TIME.getFullYear().toString()}`
+    meta.title = await readTextInput({
         title: '请输入文件名：', validite: input => {
             if (input.trim().length === 0) {
                 return '文件名不能为空'
@@ -40,8 +42,10 @@ async function main() {
         }
     })
 
-    const fileName = path.resolve(process.cwd(), typePath, title.replace(/\s/gm, '-') + '.md')
-    const content = TEMPLATE.replace('__TIME__', TIME_STR).replace('__TITLE__', title)
+    const fileName = path.resolve(process.cwd(), meta.dirName, meta.title.replace(/\s/gm, '-') + '.md')
+    const content = TEMPLATE.replace(/__(\w+)__/mg, ($0, $1) => {
+        return meta[$1]
+    })
     write(fileName, content)
 }
 

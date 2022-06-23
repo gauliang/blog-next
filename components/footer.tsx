@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ScriptProps } from 'next/script';
-import { BLOG_LOGO } from '../lib/config';
+import { BLOG_LOGO } from '../lib/snippets';
 
 export default function Footer(props: ScriptProps) {
     return (

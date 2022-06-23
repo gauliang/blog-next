@@ -6,7 +6,7 @@ import { getAllFilesFrontMatter } from '../lib/posts'
 import { BackToTop } from '../components/back-to-top'
 import { PostList } from '../components/post-list'
 import { Pagination } from '../components/post-pagination'
-import { PAGE_SIZE } from '../lib/config'
+import { PAGE_SIZE } from '../lib/snippets'
 import { HeroBanner } from '../components/hero-banner'
 
 const Post = ({ posts, pageSize, total, pageNumber }: Params) => {

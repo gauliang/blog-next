@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { ScriptProps } from "next/script";
 import { BsChevronLeft } from "react-icons/bs";
-import { BLOG_LOGO, } from "../lib/config";
+import { BLOG_LOGO, } from "../lib/snippets";
 import { ThemeSwitch } from "./theme-switch";
 
 const links = [

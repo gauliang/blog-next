@@ -5,7 +5,7 @@ import Layout from '../../../components/layout'
 import { getAllFilesFrontMatter, getAllPostIds } from '../../../lib/posts'
 import { BackToTop } from '../../../components/back-to-top'
 import { PostList } from '../../../components/post-list'
-import { PAGE_SIZE } from '../../../lib/config'
+import { PAGE_SIZE } from '../../../lib/snippets'
 import { Pagination } from '../../../components/post-pagination'
 import { HeroBanner } from '../../../components/hero-banner'
 

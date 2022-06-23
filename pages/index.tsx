@@ -6,7 +6,7 @@ import { BackToTop } from '../components/back-to-top'
 import { HeroBanner } from '../components/hero-banner'
 import Layout from '../components/layout'
 import { PostList } from '../components/post-list'
-import { PAGE_SIZE } from '../lib/config'
+import { PAGE_SIZE } from '../lib/snippets'
 import { getAllFilesFrontMatter } from '../lib/posts'
 
 export async function getStaticProps() {
