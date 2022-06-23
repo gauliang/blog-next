@@ -1,14 +1,17 @@
-
 import { useTheme } from 'next-themes'
-
 import { Popover } from '@headlessui/react'
 import { BsClockHistory, BsMoonStars, BsSun } from 'react-icons/bs'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
+const cache: any = {
+    theme: ''
+}
 export function ThemeSwitch() {
 
-    const { setTheme } = useTheme()
-    const [, setMode] = useState('system')
+    const { theme, setTheme } = useTheme()
+    console.log(theme);
+    
+    cache.theme = theme
 
     const solutions = [
         {
@@ -32,22 +35,32 @@ export function ThemeSwitch() {
     ]
 
     function setThemeHandler(theme: string) {
-        setTheme(theme.toLowerCase())
-        setMode(theme)
-        const systemIsDark = window.matchMedia("(prefers-color-scheme:dark)").matches
-        const themeColorMeta = document.querySelector('meta[name="theme-color"]')
+        cache.theme = theme.toLowerCase()
 
-        themeColorMeta?.setAttribute('content', theme === 'Light' ? 'white' : theme == 'Dark' ? '#1f2937' : systemIsDark ? '#1f2937' : 'white')
+        if (cache.theme === 'system') {
+            changeThemeColorMetaBySystem()
+        } else {
+            setThemeColorMeta(cache.theme === 'light' ? 'white' : '#1f2937')
+        }
+
+        setTheme(cache.theme)
     }
 
-    function systemThemeChangeHandler(event: any) {
-        setThemeHandler(event.matches ? 'Dark' : 'Ligth')
+    function changeThemeColorMetaBySystem() {
+        let dark = cache.theme === 'system' ? window.matchMedia("(prefers-color-scheme:dark)").matches : cache.theme === 'dark' ? true : false
+        setThemeColorMeta(dark ? '#1f2937' : 'white')
+    }
+
+    function setThemeColorMeta(value: string) {
+        const themeColorMeta = document.querySelector('meta[name="theme-color"]')
+        themeColorMeta?.setAttribute('content', value)
     }
 
     useEffect(function () {
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', systemThemeChangeHandler)
+        changeThemeColorMetaBySystem()
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', changeThemeColorMetaBySystem)
         return function () {
-            window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', systemThemeChangeHandler)
+            window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', changeThemeColorMetaBySystem)
         }
     }, [])
 
