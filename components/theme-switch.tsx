@@ -9,8 +9,6 @@ const cache: any = {
 export function ThemeSwitch() {
 
     const { theme, setTheme } = useTheme()
-    console.log(theme);
-    
     cache.theme = theme
 
     const solutions = [
