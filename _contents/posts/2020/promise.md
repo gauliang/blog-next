@@ -5,7 +5,7 @@ draft: false
 description: "Promise 对象用于表示一个异步操作的最终完成 (或失败), 及其结果值。本质上 Promise 是一个函数返回的对象，我们可以在它上面绑定回调函数，这样我们就不需要在一开始把回调函数作为参数传入这个函数了。"
 type: "posts"    # posts | series
 tags: [javascript,node.js,promise]
-series: []
+series: false
 author: "Gl"
 cover: '001.jpg'     # image name
 ---

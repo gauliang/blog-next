@@ -5,7 +5,7 @@ draft: false
 description: "块格式化上下文(Block Formatting Context) 是一个独立的渲染区域，它指定内部 `Block-level Box` 的布局方式，并且与该区域的外部无关（无论内部元素如何排列，都不会影响外部元素）。"
 type: "posts"    # posts | series
 tags: [BFC, CSS, layout]
-series: []
+series: false
 author: "Gl"
 cover: false     # image name
 ---

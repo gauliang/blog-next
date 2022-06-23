@@ -5,7 +5,7 @@ draft: false
 description: "箭头函数的语法简洁明了，非常适合作为回调使用。本文介绍 5 中关于箭头函数的最佳实践。"
 type: "posts"    # posts | series
 tags: [javascript, node.js, arrow-function,best-practices]
-series: []
+series: false
 author: "Gl"
 cover: "javascript-arrow-function-best-practices.jpg"     # image name
 ---

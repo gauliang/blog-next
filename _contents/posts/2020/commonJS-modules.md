@@ -5,7 +5,7 @@ draft: false
 description: "在 ES2015 标准之前，JavaScript语言没有模块化组织代码的原生方法，CommonJS 模块格式填补了这一空白。 CommonJS 规范了如何编写模块，以及如何在模块系统之间实现互操作。由于其同步执行特性，CMD 主要用于服务端开发，也可通过打包工具处理后用在浏览器端。"
 type: "posts"    # posts | series
 tags: ['javascript','node.js','commonjs']
-series: []
+series: false
 author: "Gl"
 cover: '001.jpg'     # image name
 ---

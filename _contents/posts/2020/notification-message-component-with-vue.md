@@ -5,7 +5,7 @@ draft: true
 description: ""
 type: "posts"    # posts | series
 tags: [vue,javascript,notification,component]
-series: []
+series: false
 author: "Gl"
 cover: false     # image name
 ---

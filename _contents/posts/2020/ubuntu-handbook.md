@@ -5,7 +5,7 @@ draft: false
 description: "本文整理记录 ubuntu 操作系统上常见问题处理说明。"
 type: "posts"    # posts | series
 tags: ["ubuntu", "linux", "handbook"]
-series: []
+series: false
 author: "Gauliang"
 cover: "cover.jpg"     # image name
 ---

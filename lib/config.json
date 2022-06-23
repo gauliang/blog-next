@@ -1,5 +1,10 @@
 {
     "series": [
-        "react"
+        {
+            "name": "react",
+            "title":"深入 React",
+            "description": "深入 React 系列之源码",
+            "image":"/series/react.jpg"
+        }
     ]
 }

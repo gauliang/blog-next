@@ -8,14 +8,14 @@ import prism from 'remark-prism';
 import { unified } from "unified";
 import remarkParse from "remark-parse/lib";
 import { generateHeadingId, generateToc, remarkCodepen, remarkImage } from './remark-plugins'
-
+import { series } from '../lib/config.json'
 
 import { upperCaseFirst } from 'upper-case-first'
 
-const postDirectory = path.join(process.cwd(), '_posts');
+const BASE_URL = path.join(process.cwd(), '_contents')
 
 export function getAllPostIds() {
-    const fileNames = glob.sync(`**/*.md`, { cwd: postDirectory });
+    const fileNames = glob.sync(`**/*.md`, { cwd: BASE_URL });
     return fileNames.map(fileName => {
         return {
             params: {
@@ -25,7 +25,6 @@ export function getAllPostIds() {
     })
 }
 
-
 function htmlTransform(html: string): string {
     html = html.replace(/<table>([\s\S]+?)<\/table>/igm, "<div class=\"table-responsive\"><table>$1</table></div>")
     html = html.replace(/<a/img, '<a target="_blank" target="_blank" class="ext-link"')
@@ -33,9 +32,9 @@ function htmlTransform(html: string): string {
 }
 
 export async function getPostData(params: any) {
-    
+
     const { id } = params
-    const fullPath = path.join(postDirectory, `${id.join('/')}.md`)
+    const fullPath = path.join(BASE_URL, `${id.join('/')}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     // Use gray-matter to parse the post metadata section
@@ -63,7 +62,10 @@ export async function getPostData(params: any) {
 }
 
 export function getAllFilesFrontMatter(): any[] {
-    const fileNames = glob.sync(`**/*.md`, { cwd: postDirectory, absolute: true });
+    const fileNames = glob.sync(`**/**/*.md`, { cwd: BASE_URL, absolute: true });
+
+    console.log(fileNames);
+    
 
     const allFrontMatter: any[] = []
 
@@ -76,7 +78,7 @@ export function getAllFilesFrontMatter(): any[] {
         if (frontmatter.draft !== true) {
             allFrontMatter.push({
                 ...frontmatter,
-                slug: path.relative(postDirectory, file).replace(/\.(mdx|md)/, ''),
+                slug: path.relative(BASE_URL, file).replace(/\.(mdx|md)/, ''),
                 date: frontmatter.date ? new Date(frontmatter.date).getTime() : null,
             })
         }
@@ -106,6 +108,35 @@ export function getAllTags() {
     })
 
     list.sort((a, b) => b.count - a.count)
+
+    return list
+}
+
+export function getAllSeries() {
+    const allPosts = getAllFilesFrontMatter()
+    const data: any = {}
+
+    series.forEach((s: any) => {
+        data[s.name] = {
+            ...s,
+            count: 0,
+            articles: []
+        }
+    });
+
+    allPosts.reverse()
+    allPosts.forEach(post => {
+
+        if (post.type === 'series') {
+
+            data[post.series].count++
+            data[post.series].articles.push(post)
+        }
+    })
+
+    const list = Array.from(Object.keys(data), k => {
+        return data[k]
+    })
 
     return list
 }

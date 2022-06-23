@@ -6,7 +6,7 @@ description: "当我们提及**模块化**时，通常意味着是由一组高�
 本文概述集中流行的模块化规范，以便在不同应用场景中能够快速决策选型。"
 type: "posts"    # posts | series
 tags: [javascript, node.js, CommonJS, esm, amd, umd]
-series: []
+series: false
 author: "Gl"
 cover: '001.jpg'     # image name
 ---

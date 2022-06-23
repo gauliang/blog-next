@@ -5,7 +5,7 @@ draft: false
 description: "本文介绍如何重置各类常用业务系统的超级管理员账号密码，如 MySQL、Gitlab 等。"
 type: "posts"    # posts | series
 tags: ["MySQL", "Gitlab", "handbook"]
-series: []
+series: false
 author: "Gl"
 cover: "password_security_feature.png"     # image name
 ---

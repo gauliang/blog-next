@@ -5,7 +5,7 @@ draft: true
 description: ""
 type: "posts"    # posts | series
 tags: []
-series: []
+series: false
 author: "Gl"
 cover: false     # image name
 ---

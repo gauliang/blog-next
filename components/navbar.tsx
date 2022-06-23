@@ -32,7 +32,7 @@ export default function Navbar(props: ScriptProps) {
 
     const defaultNav = <nav className={`md:sticky md:top-0 backdrop-blur md:from-transparent md:to-transparent md:bg-white/80 border-gray-200 border-b py-2 md:py-5  md:px-0 dark:bg-gray-800 dark:border-gray-700 z-10`}>
         <div className="md:container md:mx-auto flex flex-wrap flex-col md:flex-row justify-between">
-            <div className={`${isPostDetailRoute ? 'hidden md:flex' : 'flex'} px-5 md:px-0 flex-row md:mx-5 justify-between text-[#0069ff] dark:text-white`}>
+            <div className={`${isPostDetailRoute ? 'hidden md:flex' : 'flex'} px-5 md:px-0 flex-row justify-between text-[#0069ff] dark:text-white`}>
                 <Link href={{ pathname: '/' }}>
                     <div className="flex flex-row cursor-pointer">
                         {BLOG_LOGO}

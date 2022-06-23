@@ -5,7 +5,7 @@ draft: false
 description: "本文整理记录 ubuntu 操作系统上常见问题处理说明。"
 type: "posts"    # posts | series
 tags: ["cloudnative", "linux", "kubernetes","service-mesh"]
-series: []
+series: false
 author: "Gl"
 cover: "cover.jpg"     # image name
 ---

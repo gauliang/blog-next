@@ -5,7 +5,7 @@ draft: false
 description: "在 Git 中整合来自不同分支的修改主要有两种方法：merge 以及 rebase。rebase 命令能够将提交到某一分支上的所有修改都应用到另一分支上。"
 type: "posts"    # posts | series
 tags: [devops, git, rebase]
-series: []
+series: false
 author: "Gl"
 cover: "cover.jpg"     # image name
 ---

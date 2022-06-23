@@ -29,11 +29,11 @@ async function main() {
     }
 
     if (meta.type === 'series') {
-        const seriesName = series[await readSelectInput({ title: '请选所属系列：', options: series })]
+        const seriesName = series[await readSelectInput({ title: '请选所属系列：', options: series.map(i=>i.name) })].name
         meta.series = seriesName
     }
 
-    meta.dirName = meta.type === 'series' ? `_${meta.type}/${meta.series}` : `_${meta.type}/${TIME.getFullYear().toString()}`
+    meta.dirName = meta.type === 'series' ? `_contents/${meta.type}/${meta.series}` : `_contents/${meta.type}/${TIME.getFullYear().toString()}`
     meta.title = await readTextInput({
         title: '请输入文件名：', validite: input => {
             if (input.trim().length === 0) {
