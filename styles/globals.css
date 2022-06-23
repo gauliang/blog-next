@@ -464,6 +464,8 @@
     color: #90f;
     font-size: .8rem;
     white-space: pre-wrap;
+    word-break: break-all;
+    background-color: #9c27b011;
     padding: 0.2em;
     border-radius: 2px;
     margin: auto 0.3em;
