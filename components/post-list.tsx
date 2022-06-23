@@ -20,7 +20,7 @@ export function PostList({ posts }: Params) {
                                 <div className="space-y-3 md:space-y-6">
                                     <div>
                                         <h2 className="text-lg md:text-3xl font-bold leading-8 tracking-tight">
-                                            <Link href={{ pathname: `/${post.path}` }}>
+                                            <Link href={{ pathname: `${post.path}` }}>
                                                 <a className="text-gray-900 dark:text-gray-100">
                                                     {post.title}
                                                 </a>
@@ -43,7 +43,7 @@ export function PostList({ posts }: Params) {
                                     </div>
                                 </div>
                                 <div className="text-base font-light leading-6 ">
-                                    <Link href={{ pathname: `/${post.path}` }}>
+                                    <Link href={{ pathname: `${post.path}` }}>
                                         <a className="text-primary-500 hover:text-primary-600 text-blue-500 hover:text-blue-900 dark:hover:text-blue-500 dark:hover:underline">Read more →</a>
                                     </Link>
                                 </div>
