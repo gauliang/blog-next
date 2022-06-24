@@ -35,7 +35,7 @@ export default function Navbar(props: ScriptProps) {
             <div className={`${isPostDetailRoute ? 'hidden md:flex' : 'flex'} px-5 md:px-0 flex-row justify-between text-[#0069ff] dark:text-white`}>
                 <Link href={{ pathname: '/' }}>
                     <div className="flex flex-row cursor-pointer">
-                        {BLOG_LOGO}
+                        <div className="w-6 h-6 my-2 md:w-8 md:h-8 md:my-1">{BLOG_LOGO}</div>
                         <span className="text-xl h-8 ml-2 my-1.5 font-semibold">Gauliang</span>
                     </div>
                 </Link>

@@ -1,5 +1,5 @@
 export const PAGE_SIZE = 10
-export const BLOG_LOGO = <svg className="w-8 h-8 my-1" viewBox="0 0 512 512" fill="currentColor" >
+export const BLOG_LOGO = <svg viewBox="0 0 512 512" fill="currentColor" >
     <path d="M238.74,366.17c-24.56,0.42-12.59,0.42-36.76,0
 C92.86,358.74,92.54,257.24,92.54,257.24s-3.78-104.91,109.44-110.42c105.79,0.4,195.22,0.23,242.54,0.08
 c40.86-0.53,36.61-7.61,26.7-24.61C447.75,81.99,384.8,3.28,250.71,0C-60.02,17.45-88.35,433.93,194.97,504.76
