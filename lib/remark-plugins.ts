@@ -34,7 +34,7 @@ export function remarkImage(options: any) {
             parent.children = [
                 {
                     ...image,
-                    url: image.url.startsWith('//') ? image.url : prefix + '.files/' + image.url
+                    url: image.url.startsWith('//') ? image.url :'/attachments' + prefix + '.files/' + image.url
                 },
                 ...figcaption
             ]
