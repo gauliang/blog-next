@@ -272,11 +272,10 @@
 /* 图像组建 */
 .image-widget {
     margin-bottom: 2rem;
+    overflow: hidden;
     background-color: #f7f7f7;
-    border-radius: 3px;
-    border: 1px solid #f7f7f7;
+    border-radius: 5px;
     transition: all .3s;
-    padding: .3rem;
 }
 
 .image-widget img {
@@ -290,21 +289,17 @@
 }
 
 .image-widget:hover {
-    border-color: #006aff22;
-    box-shadow: 0 0 16px 0 #55669933;
+    box-shadow: 0 0 0 5px #55669933;
 }
 
 :root.dark .image-widget {
     background-color: #142030;
-    border: 1px solid #142030;
 }
 
 :root.dark .image-widget:hover {
     background-color: #142030;
-    border: 1px solid #142030;
     box-shadow: 0 0 0 5px #55669933;
 }
-
 
 /* TableOfContents */
 .TableOfContents a:hover,
