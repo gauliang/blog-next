@@ -48,7 +48,7 @@ export function PostContent({ post, prev, next }: Params) {
             <div className='md:mb-12 border-gray-200 py-8 md:py-20'>
                 <div className="flex space-x-2 items-center text-sm font-light text-gray-600 dark:text-gray-400">
                     <BsInfoCircle />
-                    <div>阅读全文约需 3 分钟</div>
+                    <div>阅读全文约需 {Math.round(post.words/360)} 分钟</div>
                     <div className="grow"></div>
                 </div>
                 <h1 className='text-2xl md:text-5xl my-4 md:my-8 leading-tight subpixel-antialiased font-semibold'>{post.title}</h1>
@@ -73,6 +73,6 @@ export function PostContent({ post, prev, next }: Params) {
                 {nextLink}
             </div>
         </div>
-        <div className="hidden xl:block xl:basis-1/6 shrink-0 relative bg-slate-300"></div>
+        <div className="hidden xl:block xl:basis-1/6 shrink-0 relative "></div>
     </div>
 }
