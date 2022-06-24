@@ -4,12 +4,17 @@ import Layout from '../../components/layout'
 import { getAllFrontMatterByType, getAllPostIdByType, getPostData } from '../../lib/posts'
 import { BackToTop } from '../../components/back-to-top'
 import { PostContent } from '../../components/post-content'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { HotLoad } from '../../components/hot-load'
 
 
 const Post = ({ params, post, prev, next }: Params) => {
     const [postData, setPostData] = useState(post)
+    
+    useEffect(()=>{
+        setPostData(post)
+    },[post])
+
     return (
         <Layout>
             <Head>

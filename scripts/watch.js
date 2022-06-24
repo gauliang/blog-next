@@ -19,10 +19,7 @@ function main() {
                 caches.filename = filename
                 caches.times = 1
             }
-            function send (){                
-                ws.send(JSON.stringify({ event: 'markdown-changed', path }))
-            }
-            send()
+            ws.send(JSON.stringify({ event: 'markdown-changed', path }))
         });
     })
 }

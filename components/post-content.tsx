@@ -51,11 +51,11 @@ export function PostContent({ post, prev, next }: Params) {
                     <div>阅读全文约需 {Math.round(post.words/360)} 分钟</div>
                     <div className="grow"></div>
                 </div>
-                <h1 className='text-2xl md:text-5xl my-4 md:my-8 leading-tight subpixel-antialiased font-semibold'>{post.title}</h1>
+                <h1 className='text-2xl md:text-5xl md:leading-tight my-4 md:my-8 subpixel-antialiased font-semibold'>{post.title}</h1>
                 <div className='text-sm text-gray-600 dark:text-gray-400 font-light flex items-center space-x-2'>
                     <time>{dayjs(post.date).format('YYYY-MM-DD HH:mm:ss')}</time>
                     <span>By</span>
-                    <span> Gauliang</span>
+                    <span>{post.author}</span>
                 </div>
             </div>
 

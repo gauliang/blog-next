@@ -4,7 +4,7 @@ date: 2020-12-05T18:17:44+08:00
 draft: false
 description: "Array 是 javascript 中经常用到的数据类型。本文主要讨论 javascript 中数组的声明、转换、排序、合并、迭代等基本操作。"
 type: "posts"    # posts | series
-tags: []
+tags: [array, javascript]
 series: false
 author: "Gl"
 cover: false     # image name

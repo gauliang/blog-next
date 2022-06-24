@@ -3,18 +3,18 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { getPostData } from '../../lib/posts'
 
 type Data = {
-  name: string
+    name: string
 }
 
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
+    req: NextApiRequest,
+    res: NextApiResponse<Data>
 ) {
-  if(process.env.NODE_ENV==='development'){
-    const params = req.body
-    const post = await getPostData(['posts', ...params.id])
-    return res.status(200).json(post)
-  }else{
-    return res.status(200)
-  }
+    if (process.env.NODE_ENV === 'development') {
+        const params = req.body
+        const post = await getPostData(['posts', ...params.id])
+        return res.status(200).json(post)
+    } else {
+        return res.status(200)
+    }
 }

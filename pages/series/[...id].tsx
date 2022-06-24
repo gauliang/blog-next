@@ -5,10 +5,15 @@ import { getAllFrontMatterByType, getAllPostIdByType, getPostData } from '../../
 import { BackToTop } from '../../components/back-to-top'
 import { PostContent } from '../../components/post-content'
 import { HotLoad } from '../../components/hot-load'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const Post = ({ post, prev, next, params }: Params) => {
     const [postData, setPostData] = useState(post)
+    
+    useEffect(()=>{
+        setPostData(post)
+    },[post])
+
     return (
         <Layout>
             <Head>
