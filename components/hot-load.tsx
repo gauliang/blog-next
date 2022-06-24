@@ -63,7 +63,4 @@ if(process.env.NODE_ENV === 'development'){
     core = _HotLoad
 }
 
-console.log(process.env.NODE_ENV );
-
-
 export const HotLoad = core

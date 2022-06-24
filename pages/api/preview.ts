@@ -10,7 +10,11 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const params = req.body
-  const post = await getPostData(['posts', ...params.id])
-  res.status(200).json(post)
+  if(process.env.NODE_ENV==='development'){
+    const params = req.body
+    const post = await getPostData(['posts', ...params.id])
+    return res.status(200).json(post)
+  }else{
+    return res.status(200)
+  }
 }
