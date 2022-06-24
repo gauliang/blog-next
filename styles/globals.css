@@ -167,6 +167,12 @@
     content: 'yaml';
 }
 
+:root.dark .remark-highlight pre::after{
+    background: #456;
+    color: #9ab;
+    text-shadow: none;
+}
+
 
 /* 上、下篇链接 */
 .next-and-prev-post {

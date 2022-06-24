@@ -58,9 +58,8 @@ const Series = ({ series }: Params) => {
                 <title>Series - Gauliang</title>
             </Head>
 
-            <div className="mx-5 md:mx-20 py-8 md:py-16 space-y-2 md:text-center md:space-y-5 border-b dark:border-slate-700">
-                <HeroBanner title='Series' tag={`${series.length} 个`} abstract='纸上得来终觉浅，绝知此事要躬行。' center />
-            </div>
+            <HeroBanner title='Series' tag={`${series.length} 个`} abstract='纸上得来终觉浅，绝知此事要躬行。' center />
+            
             <main className='flex flex-wrap justify-center my-16'>
                 {seriesElements}
             </main>

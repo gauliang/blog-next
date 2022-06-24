@@ -63,7 +63,7 @@ export function ThemeSwitch() {
     }, [])
 
     return <Popover className="relative">
-        <Popover.Button className=' flex h-10 flex-row items-center py-2 focus:outline-none text-inherit'>
+        <Popover.Button className=' flex h-10 flex-row items-center py-2 focus:outline-none text-blue-500 dark:text-blue-500 md:dark:text-white md:text-inherit'>
             <span className='dark:hidden'><BsSun className='w-5 h-5' /> </span>
             <span className='hidden dark:inline'><BsMoonStars className='w-5 h-5' /></span>
         </Popover.Button>

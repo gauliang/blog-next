@@ -31,12 +31,10 @@ const Tags = ({ tags, tagsByFirstLetter }: Params) => {
                 <title>Tags - Gauliang</title>
             </Head>
 
-            <div className="mx-5 md:mx-20 py-8 md:py-16 space-y-2 md:space-y-5">
-                <HeroBanner title='标签' abstract={'海纳百川，有容乃大；壁立千仞，无欲则刚。'} tag={`${tags.length} 个`} />
-            </div>
+            <HeroBanner title='标签' abstract={'海纳百川，有容乃大；壁立千仞，无欲则刚。'} tag={`${tags.length} 个`} />
 
             <main className='mx-5 md:mx-20 pb-20'>
-                <div className='columns-2 md:columns-5 gap-2 md:gap-16 border-t pt-12 dark:border-slate-700'>
+                <div className='columns-2 md:columns-5 gap-2 md:gap-16 pt-12 '>
                     {listByLetter}
                 </div>
             </main>

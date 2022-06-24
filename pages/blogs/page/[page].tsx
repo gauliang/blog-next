@@ -10,10 +10,6 @@ import { Pagination } from '../../../components/post-pagination'
 import { HeroBanner } from '../../../components/hero-banner'
 
 const Page = ({ posts, pageSize, total, pageNumber }: Params) => {
-    
-    const blogHeader = pageNumber < 2 ? <div className="mx-5 md:mx-20 py-8 md:py-16 space-y-2 md:space-y-5">
-        <HeroBanner title='博闻' abstract={`不积跬步，无以致千里；不积小流，无以成江海。`} />
-    </div> : null
 
     return (
         <Layout>
@@ -21,7 +17,9 @@ const Page = ({ posts, pageSize, total, pageNumber }: Params) => {
                 <title>Articles - Gauliang</title>
             </Head>
 
-            {blogHeader}
+            {
+                pageNumber < 2 ? <HeroBanner title='博文' abstract={`操千曲⽽后晓声，观千剑⽽后识器。`} tag={`${total} 篇`} /> : null
+            }
 
             <main className='mx-5 md:mx-20 '>
                 <PostList posts={posts} />

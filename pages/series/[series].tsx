@@ -16,9 +16,7 @@ const Page = ({ series }: Params) => {
                 <title>{upperCaseFirst(series.title)} - Series - Gauliang</title>
             </Head>
 
-            <div className="mx-5 md:mx-20 py-8 md:py-16 space-y-2 md:space-y-5">
-                <HeroBanner title={upperCaseFirst(series.title)} abstract={series.description} tag={`${series.count} 篇`} />
-            </div>
+            <HeroBanner title={upperCaseFirst(series.title)} abstract={series.description} tag={`${series.count} 篇`} />
 
             <main className='mx-5 md:mx-20 '>
                 <PostList posts={series.articles} />

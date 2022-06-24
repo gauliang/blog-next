@@ -7,7 +7,7 @@ export function PostList({ posts }: Params) {
     return <ul className='divide-y divide-gray-200 dark:divide-gray-700'>
         {posts.map((post: any) => {
             return (
-                <li key={post.title} className="py-8 md:py-12 border-t border-gray-200 dark:border-gray-700">
+                <li key={post.title} className="py-8 md:py-12">
                     <article>
                         <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-base xl:space-y-0">
                             <dl>

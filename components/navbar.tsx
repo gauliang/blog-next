@@ -28,9 +28,9 @@ const links = [
 export default function Navbar(props: ScriptProps) {
 
     const router = useRouter()
-    const isPostDetailRoute = router.pathname == `/blogs/[...id]`
+    const isPostDetailRoute = ['/blogs/[...id]', '/series/[...id]'].includes(router.pathname)
 
-    const defaultNav = <nav className={`md:sticky md:top-0 backdrop-blur md:from-transparent md:to-transparent md:bg-white/80 border-gray-200 border-b py-2 md:py-5  md:px-0 dark:bg-gray-800 dark:border-gray-700 z-10`}>
+    const defaultNav = <nav className={`md:sticky md:top-0 backdrop-blur md:bg-white/80 border-gray-200 md:border-b py-1 md:py-5 md:px-5 dark:bg-gray-800 dark:border-gray-700 z-10`}>
         <div className="md:container md:mx-auto flex flex-wrap flex-col md:flex-row justify-between">
             <div className={`${isPostDetailRoute ? 'hidden md:flex' : 'flex'} px-5 md:px-0 flex-row justify-between text-[#0069ff] dark:text-white`}>
                 <Link href={{ pathname: '/' }}>
@@ -41,18 +41,17 @@ export default function Navbar(props: ScriptProps) {
                 </Link>
                 <div className="md:hidden"><ThemeSwitch /></div>
             </div>
-            <div className={`${isPostDetailRoute ? 'hidden' : 'md:hidden'} mt-2 border-b -mb-3 divide-gray-400 dark:border-gray-700`}></div>
-            <div className={`${isPostDetailRoute ? 'hidden md:flex' : 'flex'}  items-center flex-col md:flex-row mt-5 md:mt-0`}>
-                <ul className="flex flex-row justify-between space-x-2 md:space-x-6 ">
+            <div className={`${isPostDetailRoute ? 'hidden md:flex' : 'flex'} items-start md:items-center flex-col md:flex-row mt-2 md:mt-0 mb-5 md:mb-0`}>
+                <ul className="flex flex-row justify-between ml-2 md:ml-0 space-x-0 md:space-x-6 ">
                     <li key={'首页'}>
                         <Link href={{ pathname: '/' }}>
-                            <a className={`block py-2 pr-4 pl-3  font-semibold ${router.route === '/' ? 'text-blue-500' : ''}`}>首页</a>
+                            <a className={`block py-2 mx-3 font-semibold md:border-none ${router.route === '/' ? 'text-blue-500 border-b-2 border-blue-500' : ''}`}>首页</a>
                         </Link>
                     </li>
                     {
                         links.map(link => {
                             return <li key={link.title}><Link href={{ pathname: link.pathname }}>
-                                <a className={`block py-2 pr-4 pl-3 font-semibold ${router.route.startsWith(link.pathname) ? 'text-blue-500 ' : ''}`}>{link.title}</a>
+                                <a className={`block py-2 mx-3 font-semibold md:border-none ${router.route.startsWith(link.pathname) ? 'text-blue-500 border-b-2 border-blue-500' : ''}`}>{link.title}</a>
                             </Link></li>
                         })
                     }
@@ -68,8 +67,8 @@ export default function Navbar(props: ScriptProps) {
                     </li>
                 </ul>
             </div>
-            {isPostDetailRoute && <div className="flex px-4 justify-between items-center md:hidden">
-                <Link href={{ pathname: '/' }}><a><BsChevronLeft className="w-5 h-5" /></a></Link>
+            {isPostDetailRoute && <div className="flex pl-2 pr-5 justify-between items-center md:hidden">
+                <Link href={{ pathname: '/' }}><a className="flex flex-row items-center justify-start space-x-2 text-blue-500 dark:text-blue-500 font-bold"><BsChevronLeft className="w-5 h-5" /><span>首页</span></a></Link>
                 <ThemeSwitch />
             </div>}
         </div>

@@ -16,9 +16,7 @@ const Page = ({ posts, total, tag }: Params) => {
                 <title>{upperCaseFirst(tag)} - Tags - Gauliang</title>
             </Head>
 
-            <div className="mx-5 md:mx-20 py-8 md:py-16 space-y-2 md:space-y-5">
-                <HeroBanner title={upperCaseFirst(tag)} abstract='不积跬步，无以致千里；不积小流，无以成江海。' tag={`${total} 个`} />
-            </div>
+            <HeroBanner title={upperCaseFirst(tag)} abstract='不积跬步，无以致千里；不积小流，无以成江海。' tag={`${total} 个`} />
 
             <main className='mx-5 md:mx-20 '>
                 <PostList posts={posts} />

@@ -22,9 +22,7 @@ const Home: NextPage = ({ posts }: any) => {
                 <title>Gauliang‘s blog</title>
             </Head>
 
-            <div className="mx-5 md:mx-20 py-8 md:py-16 space-y-2 md:space-y-5">
-                <HeroBanner title='大道至简' abstract='天地之所以能长且久者，以其不自生也，故能长生。' />
-            </div>
+            <HeroBanner title='大道至简' abstract='天地之所以能长且久者，以其不自生也，故能长生。' />
 
             <main className='mx-5 md:mx-20'>
                 <PostList posts={posts} />

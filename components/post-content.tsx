@@ -37,14 +37,14 @@ export function PostContent({ post, prev, next }: Params) {
         </Link>
     ) : ''
 
-    return <div className='mx-5 md:mx-20 flex flex-row md:space-x-8'>
+    return <div className='mx-5 xl:mx-10 flex flex-row md:space-x-8'>
         <div className="hidden md:block md:basis-1/6 shrink-0 py-20">
             <div className='sticky top-28'>
                 <div className='uppercase text-black dark:text-white font-bold'>Contents</div>
                 <PostContentToc toc={post.toc} />
             </div>
         </div>
-        <div className="basis-3/3 md:basis-2/3 lg:basis-5/6 w-full md:w-1">
+        <div className="basis-3/3 w-full md:w-1 md:basis-5/6 xl:basis-4/6">
             <div className='md:mb-12 border-gray-200 py-8 md:py-20'>
                 <div className="flex space-x-2 items-center text-sm font-light text-gray-600 dark:text-gray-400">
                     <BsInfoCircle />
@@ -73,6 +73,6 @@ export function PostContent({ post, prev, next }: Params) {
                 {nextLink}
             </div>
         </div>
-        <div className="hidden lg:block md:basis-1/6 shrink-0 relative"></div>
+        <div className="hidden xl:block xl:basis-1/6 shrink-0 relative bg-slate-300"></div>
     </div>
 }

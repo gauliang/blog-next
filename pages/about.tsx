@@ -12,12 +12,10 @@ const Tags = () => {
                 <title>About - Gauliang</title>
             </Head>
 
-            <div className="mx-5 md:mx-20 py-8 md:py-16 space-y-2 md:space-y-5 border-b dark:border-slate-700">
-                <HeroBanner title='About' abstract='修身、齐家、治国、平天下。' />
-            </div>
+            <HeroBanner title='About' abstract='修身、齐家、治国、平天下。' />
 
-            <div className="space-y-2 my-16 md:space-y-5 pr-10 py-20 md:py-52 text-center ">
-                <HeroBanner title='' abstract='暂时，还没想好放什么。' />
+            <div className="space-y-2 my-16 md:space-y-5 pr-10 py-20 md:py-52 text-center text-gray-500 font-thin">
+                <p>暂时，还没想好放什么。</p>
             </div>
             
             <BackToTop />
