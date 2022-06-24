@@ -69,7 +69,7 @@ export default function Navbar(props: ScriptProps) {
                 </ul>
             </div>
             {isPostDetailRoute && <div className="flex px-4 justify-between items-center md:hidden">
-                <Link href={{ pathname: '/' }}><BsChevronLeft className="w-5 h-5" /></Link>
+                <Link href={{ pathname: '/' }}><a><BsChevronLeft className="w-5 h-5" /></a></Link>
                 <ThemeSwitch />
             </div>}
         </div>

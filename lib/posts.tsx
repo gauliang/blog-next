@@ -8,7 +8,7 @@ import prism from 'remark-prism';
 import { unified } from "unified";
 import remarkParse from "remark-parse/lib";
 import { generateHeadingId, generateToc, remarkCodepen, remarkImage } from './remark-plugins'
-import { series } from '../lib/config.json'
+import config from '../lib/config.json'
 
 import { upperCaseFirst } from 'upper-case-first'
 
@@ -117,7 +117,7 @@ export function getAllSeries() {
     const allPosts = getAllFrontMatterByType('series')
     const data: any = {}
 
-    series.forEach((s: any) => {
+    config.series.forEach((s: any) => {
         data[s.name] = {
             ...s,
             count: 0,
