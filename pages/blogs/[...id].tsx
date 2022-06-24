@@ -4,15 +4,20 @@ import Layout from '../../components/layout'
 import { getAllFrontMatterByType, getAllPostIdByType, getPostData } from '../../lib/posts'
 import { BackToTop } from '../../components/back-to-top'
 import { PostContent } from '../../components/post-content'
+import { useState } from 'react'
+import { HotLoad } from '../../components/hot-load'
 
-const Post = ({ post, prev, next }: Params) => {
+
+const Post = ({ params, post, prev, next }: Params) => {
+    const [postData, setPostData] = useState(post)
     return (
         <Layout>
             <Head>
-                <title>{post.title} - Gauliang</title>
+                <title>{postData.title} - Gauliang</title>
             </Head>
-            <PostContent post={post} prev={prev} next={next} />
+            <PostContent post={postData} prev={prev} next={next} />
             <BackToTop />
+            <HotLoad setPost={setPostData} params={params} />
         </Layout>
     )
 }
@@ -29,6 +34,7 @@ export async function getStaticProps({ params }: Params) {
 
     return {
         props: {
+            params,
             post,
             prev: allPosts[index + 1] || null,
             next: allPosts[index - 1] || null,
