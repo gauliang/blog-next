@@ -59,7 +59,6 @@ export function getPreviewData(params: any) {
 let core = ({ setPost, params }: any)=>null
 
 if(process.env.NODE_ENV === 'development'){
-    console.log('development hot load');
     core = _HotLoad
 }
 

@@ -9,7 +9,6 @@ export default function Document() {
         <link rel="apple-touch-icon" href="/favicon.png"></link>
         <link rel="apple-touch-startup-image" href="/favicon.png"></link>
         <link rel="manifest" href="/manifest.json" />
-        <meta content="viewport-fit=cover, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
         <meta name="apple-mobile-web-app-title" content="Blog" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />

@@ -12,7 +12,7 @@ const Series = ({ series }: Params) => {
     const seriesElements = series.map((item: any) => {
         return <div className="flex font-sans shadow-xl lg:w-2/3 xl:w-1/2 rounded-md overflow-hidden dark:bg-slate-700" key={item.name}>
             <div className="hidden md:block w-56 relative">
-                <img src="/series/react.jpg" alt="" className="absolute inset-0 w-full h-full object-cover rounded-lg" loading="lazy" />
+                <img src={item.image} alt="" className="absolute inset-0 w-full h-full object-cover rounded-lg" loading="lazy" />
             </div>
             <div className="flex-auto p-6">
                 <div className="flex flex-col">
