@@ -4,7 +4,7 @@ author: GauLiang
 type: series
 series: react
 date: 2022-06-25T00:46:37.294Z
-tags: [react]
+tags: [react, fiber, renderer]
 description: 收集、整理 React 相关术语及其解释。
 draft: false
 cover: false     # image name
