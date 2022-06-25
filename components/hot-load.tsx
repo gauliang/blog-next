@@ -18,7 +18,7 @@ function getInstance() {
     return instance
 }
 
-function _HotLoad({ setPost, params }: any) {
+function _HotLoad({ setPost, id }: any) {
     const { asPath } = useRouter()
     useEffect(() => {
         const instance = getInstance()
@@ -26,7 +26,7 @@ function _HotLoad({ setPost, params }: any) {
             const data = JSON.parse(res.data)
             if (data.event === 'markdown-changed') {
                 if (data.path === asPath) {
-                    const post = await getPreviewData(params)
+                    const post = await getPreviewData(id)
                     setPost(post)
                 }
             }
@@ -38,7 +38,7 @@ function _HotLoad({ setPost, params }: any) {
     return null
 }
 
-export function getPreviewData(params: any) {
+export function getPreviewData(id: string[]) {
     if (instance.timer) {
         clearTimeout(instance.timer)
     }
@@ -49,7 +49,7 @@ export function getPreviewData(params: any) {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(params)
+                body: JSON.stringify(id)
             })
             resolve(res.json())
         }, 200)
