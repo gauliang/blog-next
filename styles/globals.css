@@ -128,6 +128,7 @@
     border-top-right-radius: 3px;
     padding: 0 .5rem;
     font-size: .75rem;
+    text-shadow: none;
 }
 
 .remark-highlight pre.language-bash::after {
@@ -140,6 +141,13 @@
     background-color: #2196f3;
     color: #FFF;
     content: 'Shell';
+}
+
+.remark-highlight pre.language-ts::after
+.remark-highlight pre.language-typescript::after {
+    background-color: #3178c6;
+    color: #FFF;
+    content: 'TypeScript';
 }
 
 .remark-highlight pre.language-js::after,
@@ -167,10 +175,20 @@
     content: 'yaml';
 }
 
+.remark-highlight pre.language-jsx::after {
+    background-color: #61dafb;
+    color: #333;
+    content: 'jsx';
+}
+.remark-highlight pre.language-tsx::after {
+    background-color: #61dafb;
+    color: #333;
+    content: 'tsx';
+}
+
 :root.dark .remark-highlight pre::after{
     background: #456;
     color: #9ab;
-    text-shadow: none;
 }
 
 
@@ -450,8 +468,8 @@
 /* 链接 */
 .post-content a {
     cursor: pointer;
-    padding-right: 1.5em;
-    padding-left: .3em;
+    padding-right: .5em;
+    padding-left: .5em;
     position: relative;
     color: #0069ff;
     word-wrap: break-word;
@@ -460,6 +478,8 @@
 .post-content a:hover {
     text-decoration: underline;
 }
+
+.post-content strong{color: black; margin-left: .5em; margin-right: .5em;}
 
 .post-content code {
     color: #90f;
@@ -490,9 +510,9 @@
 }
 
 :root.dark .post-content {
-    color: rgb(148, 163, 184);
+    color: #94a3b8;
 }
-
+:root.dark .post-content strong{color: white;}
 :root.dark .post-content h1,
 :root.dark .post-content h2,
 :root.dark .post-content h3,
