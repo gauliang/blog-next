@@ -7,7 +7,7 @@ import { PostContent } from '../../components/post-content'
 import { HotLoad } from '../../components/hot-load'
 import { useEffect, useState } from 'react'
 
-const Post = ({ post, prev, next, params }: Params) => {
+const Post = ({ post, prev, next, id }: Params) => {
     const [postData, setPostData] = useState(post)
     
     useEffect(()=>{
@@ -20,7 +20,7 @@ const Post = ({ post, prev, next, params }: Params) => {
                 <title>{postData.title} - Gauliang</title>
             </Head>
             <PostContent post={postData} prev={prev} next={next} />
-            <HotLoad setPost={setPostData} params={params} />
+            <HotLoad setPost={setPostData} id={id} />
             <BackToTop />
         </Layout>
     )
@@ -39,7 +39,7 @@ export async function getStaticProps({ params }: Params) {
 
     return {
         props: {
-            params,
+            id:id,
             post,
             prev: allPosts[index + 1] || null,
             next: allPosts[index - 1] || null,
