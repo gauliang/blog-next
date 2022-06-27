@@ -3,6 +3,11 @@ import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
 
+/**
+ * 
+ * @param param0 
+ * @returns 
+ */
 function MyApp({ Component, pageProps }: AppProps) {
   return <>
     <Head>
