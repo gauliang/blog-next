@@ -7,7 +7,7 @@ type: "posts"    # posts | series
 tags: [javascript, node.js, arrow-function,best-practices]
 series: false
 author: "Gl"
-cover: "javascript-arrow-function-best-practices.jpg"     # image name
+cover: "javascript-arrow-function-best-practices.jpg"
 ---
 
 ![Javascript 箭头函数最佳实践](javascript-arrow-function-best-practices.jpg)

@@ -7,7 +7,7 @@ type: "posts"    # posts | series
 tags: ["docker"]
 series: false
 author: "Gl"
-cover: false     # image name
+cover: false
 ---
 
 Docker 是一个用于开发、交付和运行应用程序的开放平台。Docker 使您能够将应用程序与基础架构分开，以与管理应用程序相同的方式来管理基础架构，从而快速交付软件。通过利用 Docker 快速交付、测试和部署代码的方法，您可以大大缩短编写代码和在生产环境中运行代码之间的时间。

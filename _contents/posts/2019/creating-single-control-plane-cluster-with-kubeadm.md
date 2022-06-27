@@ -7,7 +7,7 @@ type: "posts"    # posts | series
 tags: ["kubernetes", "docker", "dashboard", "ingress-nginx"]
 series: false
 author: "Gl"
-cover: "cover.png"     # image name
+cover: "cover.png"
 ---
 
 ![部署单控制平面 k8s 集群，并安装 Dashboard 和 ingress-nginx 使外部浏览器可以访问集群。](cover.png)

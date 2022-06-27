@@ -7,7 +7,7 @@ type: "posts"    # posts | series
 tags: [closure, lexical-environment, javascript, node.js, 闭包]
 series: false
 author: "Gl"
-cover: "cover.jpg"     # image name
+cover: "cover.jpg"
 ---
 
 ![Javascript Closure](cover.jpg)

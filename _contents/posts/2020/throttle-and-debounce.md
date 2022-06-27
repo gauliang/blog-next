@@ -7,7 +7,7 @@ type: "posts"    # posts | series
 tags: [debounce,throttle,javascript]
 series: false
 author: "Gl"
-cover: 'throttle-and-debounce.jpg'     # image name
+cover: 'throttle-and-debounce.jpg'
 ---
 
 ![](throttle-and-debounce.jpg)

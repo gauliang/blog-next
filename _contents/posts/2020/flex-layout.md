@@ -7,7 +7,7 @@ type: "posts"    # posts | series
 tags: ['css','flex','layout']
 series: false
 author: "Gl"
-cover: 'cover.jpg'     # image name
+cover: 'cover.jpg'
 ---
 
 ![](cover.jpg)

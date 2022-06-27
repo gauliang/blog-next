@@ -7,7 +7,7 @@ type: "posts"    # posts | series
 tags: [BFC, CSS, layout]
 series: false
 author: "Gl"
-cover: false     # image name
+cover: false
 ---
 
 

@@ -8,7 +8,7 @@ type: "posts"    # posts | series
 tags: [javascript, node.js, CommonJS, esm, amd, umd]
 series: false
 author: "Gl"
-cover: '001.jpg'     # image name
+cover: '001.jpg'
 ---
 
 ![](001\.jpg)

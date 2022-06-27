@@ -7,7 +7,7 @@ type: "posts"    # posts | series
 tags: ["devops","gitlab"]
 series: false
 author: "Gauliang"
-cover: Gitlab-1.png     # image name
+cover: Gitlab-1.png
 ---
 
 ![](Gitlab-1\.png)

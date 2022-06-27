@@ -7,7 +7,7 @@ date: 2022-06-24T09:07:23.954Z
 tags: [next.js, fast-refresh]
 description: Next.js 提供了 Fast-Refresh 能力，它可以为您对 React 组件所做的编辑提供即时反馈。但是，当你通过 Markdown 文件提供网站内容时，由于 Markdown 不是 React 组件，热更新将失效。
 draft: false
-cover: false     # image name
+cover: false
 ---
 
 Next.js 提供了 Fast-Refresh 能力，它可以为您对 React 组件所做的编辑提供即时反馈。

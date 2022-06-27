@@ -8,7 +8,7 @@ type: "posts"    # posts | series
 tags: [webpack,devops,node.js,esm]
 series: false
 author: "Gl"
-cover: "webpack.jpg"     # image name
+cover: "webpack.jpg"
 ---
 
 ![webpack](webpack.jpg)

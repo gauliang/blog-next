@@ -46,6 +46,8 @@
     border-bottom: 1px solid #eee;
 }
 
+.table-responsive td a{padding-left: 0; padding-right: 0;}
+
 @media(max-width: 767px) {
     .table-responsive {
         overflow-x: scroll
@@ -184,6 +186,30 @@
     background-color: #61dafb;
     color: #333;
     content: 'tsx';
+}
+
+.remark-highlight pre.language-csharp::after {
+    background-color: #9c27b0;
+    color: white;
+    content: 'c#';
+}
+
+.remark-highlight pre.language-c::after {
+    background-color: #000000;
+    color: white;
+    content: 'c';
+}
+.remark-highlight pre.language-php::after {
+    background-color: #8450d9;
+    color: white;
+    content: 'php';
+}
+
+
+.remark-highlight pre.language-xml::after {
+    background-color: #0078d4;
+    color: white;
+    content: 'xml';
 }
 
 :root.dark .remark-highlight pre::after{

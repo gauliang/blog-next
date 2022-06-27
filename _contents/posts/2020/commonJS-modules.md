@@ -7,7 +7,7 @@ type: "posts"    # posts | series
 tags: ['javascript','node.js','commonjs']
 series: false
 author: "Gl"
-cover: '001.jpg'     # image name
+cover: '001.jpg'
 ---
 
 ![CommonJS Modules](001.jpg)

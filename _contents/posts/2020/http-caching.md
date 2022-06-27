@@ -7,7 +7,7 @@ type: "posts"    # posts | series
 tags: []
 series: false
 author: "Gl"
-cover: false     # image name
+cover: false
 ---
 
 Web 缓存减少了等待时间和网络流量，因此减少了显示资源表示形式所需的时间。

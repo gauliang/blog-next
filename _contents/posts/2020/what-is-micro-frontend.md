@@ -7,7 +7,7 @@ type: "posts"    # posts | series
 tags: []
 series: false
 author: "Gl"
-cover: false     # image name
+cover: false
 ---
 
 好的前端开发很难。扩展前端开发，使许多团队可以同时处理大型复杂产品，这变得更加困难。

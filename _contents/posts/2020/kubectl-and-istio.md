@@ -4,10 +4,10 @@ date: 2020-08-09T11:13:31+08:00
 draft: false
 description: "本文整理记录 ubuntu 操作系统上常见问题处理说明。"
 type: "posts"    # posts | series
-tags: ["cloudnative", "linux", "kubernetes","service-mesh"]
+tags: [istio, linux, kubernetes,service-mesh]
 series: false
 author: "Gl"
-cover: "cover.jpg"     # image name
+cover: "cover.jpg"
 ---
 
 ![](cover.jpg)

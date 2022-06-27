@@ -12,7 +12,7 @@ date: __time__
 tags: []
 description: description
 draft: true
-cover: false     # image name
+cover: false
 ---`
 
 const TIME = new Date()

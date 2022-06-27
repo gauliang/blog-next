@@ -7,7 +7,7 @@ type: "posts"    # posts | series
 tags: [javascript,node.js,promise]
 series: false
 author: "Gl"
-cover: '001.jpg'     # image name
+cover: '001.jpg'
 ---
 
 ![](001.jpg)

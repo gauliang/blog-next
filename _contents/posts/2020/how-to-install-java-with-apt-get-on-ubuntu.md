@@ -7,7 +7,7 @@ type: "posts"    # posts | series
 tags: ["Java"]
 series: false
 author: "Gl"
-cover: false     # image name
+cover: false
 ---
 
 Java 和 JVM（Java 的虚拟机）被广泛使用，本文介绍如何使用 `apt-get` 安装不同版本的 Open JRE 和 Open JDK。JRE 仅用于提供 Java 应用程序执行环境，如果要编译 Java 应用程序，则要安装 JDK。

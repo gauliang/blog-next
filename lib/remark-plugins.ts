@@ -91,7 +91,7 @@ export function generateHeadingId(options: any) {
             const lastChild = node.children[node.children.length - 1]
 
             if (lastChild && lastChild.type === 'text') {
-                const text = lastChild.value.replace(/[\s&\.]+/mg, '-')
+                const text = lastChild.value.replace(/[\s&\.\+#\(\)]+/mg, '-')
                 const matched = text.match(/ {#([^]+?)}$/)
                 if (matched) {
                     const id = matched[1]
