@@ -89,11 +89,3 @@ cover: false
 | 根指数 | radical exponent |
 | 无理数 | irrational number |
 | 实数 | real number |
-
-
-
-### 写在后面
-
-**后续还将持续更新** 本文地址：[https://www.cnblogs.com/kelsen/p/9384958.html](https://www.cnblogs.com/kelsen/p/9384958.html)
-
-如果您有任何建议或疑问请在下面留言交流。

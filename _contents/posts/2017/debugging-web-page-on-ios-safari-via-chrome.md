@@ -63,9 +63,3 @@ Note: Your browser may block1,2 the above links with JavaScript console error:  
 根据提示说明复制链接并打开，即可看到常见的 chrome 调试窗口。
 
 接下来，就可以进行正常的调试工作了。
-
-## 最后
-
-本文地址：http://www.cnblogs.com/kelsen/p/6368550.html
-
-如果您有任何建议或疑问请在下面留言交流。
