@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2015-03-26T21:39:00.791Z
-tags: [php, install]
+tags: [php]
 description: configuresthis package to adapt to many kinds of systems.
 draft: false 
 cover: false

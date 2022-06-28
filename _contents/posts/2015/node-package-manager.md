@@ -319,7 +319,3 @@ var projectName = require("@username/project-name")
 ## 十三、Working with npm Organizations
 
 请参考https://docs.npmjs.com/getting-started/working-with-orgs
-
-## 写在后面
-
-关于本文如果您有任何建议或疑问请在下面留言交流。

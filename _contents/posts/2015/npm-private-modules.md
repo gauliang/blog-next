@@ -98,6 +98,4 @@ npm access restricted <package_name>
 
 ## 写在后面
 
-关于本译文如有任何疑问请在下面留言交流。
-
 本文译自 npm 官方文档https://docs.npmjs.com/private-modules/intro

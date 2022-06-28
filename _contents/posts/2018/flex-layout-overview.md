@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2018-07-29T12:48:00.791Z
-tags: [flex, css, layout]
+tags: [css, layout]
 description: 传统的布局方案，在针对特殊布局时会很不方便，比如垂直居中，把一个容器等分为N列等等。自从 Flex 出现以后，这些都迎刃而解了，本文对Flex相关内容做一个简单梳理。
 draft: false 
 cover: false
@@ -63,9 +63,3 @@ Flex 是 Flexible Box 的缩写，意为”弹性布局”，任何一个容器�
 1. flex-basis 定义在分配多余空间之前，项目占据的主轴空间
 1. flex 是 grow shrink basis 的简写。取值 ` none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]`
 1. align-self 定义当前项目的对其方式。取值 `auto | flex-start | flex-end | center | baseline | stretch`
-
-## 写在后面
-
-本文地址：[https://www.cnblogs.com/kelsen/p/8647896.html](https://www.cnblogs.com/kelsen/p/8647896.html)
-
-如果您有任何建议或疑问请在下面留言交流。

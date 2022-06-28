@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2014-06-10T00:28:00.791Z
-tags: [php, static, self, this]
+tags: [php]
 description: 当希望指向最终的实现功能的类时，就可以使用 static，这个限定符会在代码执行之前立即计算出继承层次结构上最后那个类的成员。这一过程被称作延迟绑定。
 draft: false 
 cover: false

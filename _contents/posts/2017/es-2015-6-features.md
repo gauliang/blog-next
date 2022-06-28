@@ -538,8 +538,3 @@ factorial(100000)
 ## 常用工具 - 持续更新
 如果你想在老版本浏览器使用 import()，请记得使用 polyfill（例如 es6-promise 或 promise-polyfill）来 shim Promise。import() 在内部依赖于 Promise。
 
-## 写在后面
-
-本文地址：[https://www.cnblogs.com/kelsen/p/7046004.html](https://www.cnblogs.com/kelsen/p/7046004.html)
-
-如果您有任何建议或疑问请在下面留言交流。

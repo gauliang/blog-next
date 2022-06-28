@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2014-12-16T17:40:00.791Z
-tags: [php, laravel, image]
+tags: [php, laravel]
 description: Integration/Image 是一个图片处理的库，其功能强大到���以处理你的几乎所有图片处理需求。本文介绍其在laravel框架下的安装与基本使用。
 draft: false 
 cover: false

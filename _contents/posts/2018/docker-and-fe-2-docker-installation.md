@@ -108,8 +108,3 @@ $ sudo dnf remove docker-ce
 $ sudo rm -rf /var/lib/docker
 ```
 
-## 写在后面
-
-本文地址：[https://www.cnblogs.com/kelsen/p/9438321.html](https://www.cnblogs.com/kelsen/p/9438321.html)
-
-如果您有任何建议或疑问请在下面留言交流。

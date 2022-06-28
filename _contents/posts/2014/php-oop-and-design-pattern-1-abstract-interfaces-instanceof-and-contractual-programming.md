@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2014-06-09T01:31:00.791Z
-tags: [php,instanceof, abstract, implements, interface]
+tags: [php]
 description: 本文将介绍抽象类、接口和一种称为契约式编程的技术。使用这些 OPP 机制，所编写的代码就不限于只能计算或者输出内容了。这些机制能够在概念层次上定义类之间交互作用的规则，也为应用程序的扩展和定制提供了基础。
 draft: false 
 cover: false

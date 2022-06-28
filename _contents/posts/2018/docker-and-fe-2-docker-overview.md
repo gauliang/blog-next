@@ -184,8 +184,3 @@ docker run -v /home/data:/data debian ls /data
 
 其实经常用到的命令还有很多，可以在 `http://docs.docker.com` 查阅完整的释义，也可以在命令行通过 `--help`参数查看具体使用说明。
 
-## 写在后面
-
-本文地址：[https://www.cnblogs.com/kelsen/p/9608578.html](https://www.cnblogs.com/kelsen/p/9608578.html)
-
-如果您有任何建议或疑问请在下面留言交流。

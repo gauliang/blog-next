@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2015-11-07T20:52:00.791Z
-tags: [gitbash]
+tags: [encode]
 description: gitbash 是 windows 环境下非常好用的命令行终端，可以模拟一下 linux 下的命令如 ls/mkdir 等，如果使用过程中遇到中文显示不完整或乱码的情况，多半是因为编码问题导致的，修改文本编码即可。
 draft: false 
 cover: false
