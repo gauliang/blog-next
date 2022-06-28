@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2017-02-15T17:51:00.791Z
-tags: [ios_webkit_debug_proxy, 调试, debug]
+tags: [ios_webkit_debug_proxy, debug]
 description: ios-webkit-debug-proxy 是一个 DevTools proxy  ，项目托管在 Github 上。其使得开发者发送命令到真实（或虚拟）IOS设备中的 Safari 浏览器或 UIWebViews 中,以实现对 IOS 中 Safari 页面的调试。
 draft: false 
 cover: false

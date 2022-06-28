@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2018-10-07T18:53:00.791Z
-tags: [java, 设计模式, 垃圾回收]
+tags: [java, 垃圾回收]
 description: 弄清楚类与对象的本质与基本特征，是进一步学习面向对象编程语言的基本要求。面向对象程序设计与面向过程程序设计在思维上存在着很大差别，改变一种思维方式并不是一件容易的事情。
 draft: false 
 cover: false

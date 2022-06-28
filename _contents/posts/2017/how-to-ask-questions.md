@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2017-01-07T16:18:00.791Z
-tags: [调试, laravel, vagrant, 方法论]
+tags: [laravel, vagrant, 方法论]
 description: 如何优雅的向别人提出你不懂的问题？1.背景说明：尽可能详细的描述你做了什么；2.问题本身：尽可能详细的描述问题本身；3.环境信息：尽可能详细的提供有利于别人判断问题所在的关键点。
 draft: false 
 cover: false
