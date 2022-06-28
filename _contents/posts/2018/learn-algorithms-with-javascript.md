@@ -4,8 +4,8 @@ author: 高国良
 type: posts
 series: false
 date: 2018-05-20T10:52:00.791Z
-tags: [web, javascript, nodejs, this, github, 数学, Algorithms]
-description: 基于 __ERR__javascript__ERR__ 学习并实现常用的经典算法。本项目托管在 [GitHub]，欢迎对算法和数学感兴趣的 Js 开发者参与，一起学习共同进步。
+tags: [javascript, Algorithms]
+description: 基于 javascript 学习并实现常用的经典算法。本项目托管在 [GitHub]，欢迎对算法和数学感兴趣的 Js 开发者参与，一起学习共同进步。
 draft: false 
 cover: false
 ---
@@ -108,7 +108,4 @@ cover: false
 
 ## 写在后面
 
-1. 本文地址：[https://www.cnblogs.com/kelsen/p/9387618.html](https://www.cnblogs.com/kelsen/p/9387618.html)
 1. 项目地址：[Learn-Algorithms-With-Javascript](https://github.com/gauliang/Learn-Algorithms-With-Javascript)
-
-如果您有任何建议或疑问请在下面留言交流。

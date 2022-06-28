@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2019-05-12T22:54:00.791Z
-tags: []
+tags: [docker]
 description: Harbor can be installed by one of three approaches__ERR__ Online installer__ERR__ The installer downloads Harbor's images from Docker hub. For this reason, the in
 draft: false 
 cover: false

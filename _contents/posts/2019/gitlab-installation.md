@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2019-05-28T07:55:00.791Z
-tags: []
+tags: [git]
 description: 安装并配置必要的依赖项 添加GitLab软件包存储库 配置SSL数字证书 做好域名解析并申请好数字证书后，将证书文件上传至 目录下，更名为 和 。注意域名信息，这里和后面安装命令中的 一致。 安装软件包 设置初始密码 第一次访问 ，会提示设置超级管理员密码，可视化界面，设计即可。 配置邮件转发 这里
 draft: false 
 cover: false

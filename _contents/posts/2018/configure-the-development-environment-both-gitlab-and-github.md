@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2018-01-24T16:21:00.791Z
-tags: [git, gitlab, github, ssh]
+tags: [git, ssh]
 description: Git 客户端与服务器端的通信支持多种协议，ssh 最常用。ssh的公钥登录流程：用户将自己的公钥存储在远程主机，登录时，远程主机会向用户发送一条消息，用户用自己的私钥加密后，再发给服务器。远程主机用事先存储的公钥进行解密，如果成功，就证明用户可信。 生成公私密钥 用户必须事先提供自己的公钥给服务器
 draft: false 
 cover: false
@@ -12,7 +12,7 @@ cover: false
 
 Git 客户端与服务器端的通信支持多种协议，ssh 最常用。ssh的公钥登录流程：用户将自己的公钥存储在远程主机，登录时，远程主机会向用户发送一条消息，用户用自己的私钥加密后，再发给服务器。远程主机用事先存储的公钥进行解密，如果成功，就证明用户可信。
 
-![](http://images2017.cnblogs.com/blog/634103/201801/634103-20180124162449147-1441048241.png)
+![](634103-20180124162449147-1441048241.png)
 
 ##  生成公私密钥
 
@@ -82,9 +82,3 @@ git config --global user.email "githubuser@xyz.com"
 ~/github$ git config --local user.name "githubuser"
 ~/github$ git config --local user.email "githubuser@xyz.com"
 ```
-
-## 写在后面
-
-本文地址：https://www.cnblogs.com/kelsen/p/8342239.html
-
-如果您有任何建议或疑问请在下面留言交流。

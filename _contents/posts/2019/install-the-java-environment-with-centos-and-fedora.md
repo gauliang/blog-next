@@ -4,13 +4,13 @@ author: 高国良
 type: posts
 series: false
 date: 2019-04-04T23:43:00.791Z
-tags: []
+tags: [centos,java]
 description: 介绍 本文介绍如何在 CentOS 7（6/6.5）、 Fedora、RHEL 上安装 Java。Java是一个流行的软件平台，允许您运行Java应用程序。 本文涵盖了以下Java版本的安装： OpenJDK 8 Oracle Java 8 先决条件 在开始之前，您应该有一个能够执行 root 权限
 draft: false 
 cover: false
 ---
 
-![](https://img2018.cnblogs.com/blog/634103/201904/634103-20190405000319046-1615757202.png)
+![](634103-20190405000319046-1615757202.png)
 
 
 

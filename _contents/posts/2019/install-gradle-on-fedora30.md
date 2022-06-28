@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2019-05-12T15:07:00.791Z
-tags: []
+tags: [Gradle,java,linux]
 description: 当前的 Gradle 最新版本是5.4.1。您可以从发布页面下载所有 Gradle 版本的二进制文件和查看文档。 先决条件 Gradle 能够在所有主流操作系统上运行，只要具备 Java JDK/JRE 环境即可，Java 版本必须为 8或更高。 安装 1、下载 Gradle 目前的Gradle版本
 draft: false 
 cover: false

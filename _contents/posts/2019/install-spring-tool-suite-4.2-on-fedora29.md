@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2019-04-04T21:27:00.791Z
-tags: []
+tags: [spring,java]
 description: 下载安装包 下载地址：https__ERR__//spring.io/tools 文件：STS 4.2.0.RELEASE.tar.gz 解压部署软件包 解压文件至 目录。 添加启动图标 创建文件 ，输入下面内容：
 draft: false 
 cover: false

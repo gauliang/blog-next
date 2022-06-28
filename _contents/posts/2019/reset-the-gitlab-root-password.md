@@ -4,13 +4,13 @@ author: 高国良
 type: posts
 series: false
 date: 2019-07-11T08:07:00.791Z
-tags: []
+tags: [password,git]
 description: <img src="https__ERR__//img2018.cnblogs.com/blog/634103/201908/634103-20190812005008821-76726312.png" class="desc_img">
 draft: false 
 cover: false
 ---
 
-![](https://img2018.cnblogs.com/blog/634103/201908/634103-20190812005008821-76726312.png)
+h![](634103-20190812005008821-76726312.png)
 
 要重置root密码，请先使用root权限登录服务器。使用以下命令启动Ruby on Rails控制台：
 

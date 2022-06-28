@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2019-09-06T12:04:00.791Z
-tags: []
+tags: [linux,ubuntu]
 description: <img src="https__ERR__//img2018.cnblogs.com/blog/634103/201909/634103-20190908182418386-695298629.jpg" class="desc_img">
 draft: false 
 cover: false

@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2019-05-09T07:33:00.791Z
-tags: [rancher, kubernetes, k8s, docker, ubuntu]
+tags: [rancher, kubernetes, docker]
 description: 对于生产环境，需以高可用的配置安装 Rancher，确保用户始终可以访问 Rancher Server。当安装在Kubernetes集群中时，Rancher将与集群的 etcd 集成，并利用Kubernetes 调度实现高可用。
 draft: false 
 cover: false
