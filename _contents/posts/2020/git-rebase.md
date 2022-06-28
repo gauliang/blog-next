@@ -3,10 +3,10 @@ title: "Git Rebase"
 date: 2020-09-13T09:39:21+08:00
 draft: false
 description: "在 Git 中整合来自不同分支的修改主要有两种方法：merge 以及 rebase。rebase 命令能够将提交到某一分支上的所有修改都应用到另一分支上。"
-type: "posts"    # posts | series
+type: posts
 tags: [devops, git, rebase]
 series: false
-author: "Gl"
+author: GauLiang
 cover: "cover.jpg"
 ---
 

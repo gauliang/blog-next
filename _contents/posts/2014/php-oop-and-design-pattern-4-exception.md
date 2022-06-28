@@ -5,7 +5,7 @@ type: posts
 series: false
 date: 2014-06-12T01:20:00.791Z
 tags: [php, Exception]
-description: PHP5 增加了类似其他语言的异常处理模块。在PHP代码中所产生的异常可被 throw 语句抛出并被 catch 语句捕获。需要进行异常处理的代码都必须放入到 try 代码���内，以便捕获可能存在的异常。每个try至少对应一个 catch 块。使用多个 catch 可以捕获不同的类所产生的异常。
+description: PHP5 增加了类似其他语言的异常处理模块。在PHP代码中所产生的异常可被 throw 语句抛出并被 catch 语句捕获。需要进行异常处理的代码都必须放入到 try 代码块内，以便捕获可能存在的异常。每个try至少对应一个 catch 块。使用多个 catch 可以捕获不同的类所产生的异常。
 draft: false 
 cover: false
 ---

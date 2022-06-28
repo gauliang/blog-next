@@ -3,10 +3,10 @@ title: "深入 React Redux"
 date: 2020-11-15T08:24:14+08:00
 draft: false
 description: "React Redux是React的官方Redux UI绑定库 。 如果您同时使用Redux和React，则还应该使用React Redux绑定这两个库。"
-type: "posts"    # posts | series
+type: posts
 tags: [react, redux, flux, javascript, node.js]
 series: false
-author: "Gl"
+author: GauLiang
 cover: "dive-react-redux.jpg"
 ---
 

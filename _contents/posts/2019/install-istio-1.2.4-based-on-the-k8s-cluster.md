@@ -5,7 +5,7 @@ type: posts
 series: false
 date: 2019-08-31T16:45:00.791Z
 tags: [kubernetes,istio]
-description: <img src="https__ERR__//img2018.cnblogs.com/blog/634103/201908/634103-20190830084324046-130039261.png" class="desc_img">
+description: 使用云平台可以为组织提供丰富的好处。然而，不可否认的是，采用云可能会给 DevOps 团队带来压力。Istio 允许您连接、保护、控制和观测服务。
 draft: false 
 cover: false
 ---

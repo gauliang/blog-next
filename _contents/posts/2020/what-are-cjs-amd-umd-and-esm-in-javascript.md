@@ -2,17 +2,17 @@
 title: "Javascript 模块化概述"
 date: 2020-09-05T16:04:37+08:00
 draft: false
-description: "当我们提及**模块化**时，通常意味着是由一组高度分离的，不同的功能块存储在模块中组成的。在可能的情况下，通过松散耦合消除依赖关系简化应用程序的可维护性。
-本文概述集中流行的模块化规范，以便在不同应用场景中能够快速决策选型。"
-type: "posts"    # posts | series
+description: 当我们提及模块化时，通常意味着是由一组高度分离的，不同的功能块存储在模块中组成的。在可能的情况下，通过松散耦合消除依赖关系简化应用程序的可维护性。
+type: posts
 tags: [javascript, node.js, CommonJS, esm, amd, umd]
 series: false
-author: "Gl"
+author: GauLiang
 cover: '001.jpg'
 ---
 
 ![](001.jpg)
-当我们提及**模块化**时，通常意味着是由一组高度分离的，不同的功能块存储在模块中组成的。
+
+当我们提及 **模块化** 时，通常意味着是由一组高度分离的，不同的功能块存储在模块中组成的。
 在可能的情况下，通过松散耦合消除依赖关系简化应用程序的可维护性。
 本文概述集中流行的模块化规范，以便在不同应用场景中能够快速决策选型。
 
@@ -69,7 +69,9 @@ UMD 本质上创建了一种使用这两种方法之一的方式，同时还支�
 }(this, function ($, _) {
     // this is where I defined my module implementation
 
-    var Requester = { // ... };
+    var Requester = {
+        // ...
+    };
 
     return Requester;
 }));

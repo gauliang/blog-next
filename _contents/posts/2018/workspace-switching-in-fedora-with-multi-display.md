@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2018-08-04T11:10:00.791Z
-tags: [linux, GNOME]
+tags: [linux, gnome]
 description: 默认情况下，fedora中 Gnome 桌面环境在切换工作去的时候，只会在 Primary display 上切换， 其他显示器保持不变。如果要实现多显示器同时切换，需对 GNOME 进行相关配置。
 draft: false 
 cover: false

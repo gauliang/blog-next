@@ -3,10 +3,10 @@ title: "安装和配置 kubectl & istioctl"
 date: 2020-08-09T11:13:31+08:00
 draft: false
 description: "本文整理记录 ubuntu 操作系统上常见问题处理说明。"
-type: "posts"    # posts | series
+type: posts
 tags: [istio, linux, kubernetes,service-mesh]
 series: false
-author: "Gl"
+author: GauLiang
 cover: "cover.jpg"
 ---
 

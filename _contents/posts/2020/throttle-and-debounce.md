@@ -3,10 +3,10 @@ title: "Throttling and Debounce"
 date: 2020-11-26T18:15:32+08:00
 draft: false
 description: "节流是指，确保连续发生的事件（函数调用）按指定频率（时间间隔）触发执行器。防抖是指，事件发生（函数调用）后，在指定时间内，同样的操作只有最后一次会生效。"
-type: "posts"    # posts | series
+type: posts
 tags: [debounce,throttle,javascript]
 series: false
-author: "Gl"
+author: GauLiang
 cover: 'throttle-and-debounce.jpg'
 ---
 

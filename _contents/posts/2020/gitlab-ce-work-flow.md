@@ -3,7 +3,7 @@ title: "Gitlab CE Work Flow"
 date: 2020-08-29T08:09:15+08:00
 draft: false
 description: "Gitlab-CE 工作流最佳实践"
-type: "posts"    # posts | series
+type: posts
 tags: ["devops","gitlab"]
 series: false
 author: "Gauliang"

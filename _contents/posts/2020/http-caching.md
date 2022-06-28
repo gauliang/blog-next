@@ -3,10 +3,10 @@ title: "Http Caching"
 date: 2020-12-06T10:55:29+08:00
 draft: true
 description: ""
-type: "posts"    # posts | series
+type: posts
 tags: []
 series: false
-author: "Gl"
+author: GauLiang
 cover: false
 ---
 

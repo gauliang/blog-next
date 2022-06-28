@@ -3,10 +3,10 @@ title: "在 Linux 和 Windows 平台安装 Docker CE"
 date: 2020-01-22T16:32:22+08:00
 draft: false
 description: "Docker 是一个用于开发、交付和运行应用程序的开放平台。Docker 使您能够将应用程序与基础架构分开，以与管理应用程序相同的方式来管理基础架构，从而快速交付软件。通过利用 Docker 快速交付、测试和部署代码的方法，您可以大大缩短编写代码和在生产环境中运行代码之间的时间。"
-type: "posts"    # posts | series
+type: posts
 tags: ["docker"]
 series: false
-author: "Gl"
+author: GauLiang
 cover: false
 ---
 

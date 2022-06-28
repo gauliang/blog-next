@@ -3,10 +3,10 @@ title: "Javascript 中的数组"
 date: 2015-10-01T19:34:00.791Z
 draft: false
 description: "Array 是 javascript 中经常用到的数据类型。本文主要讨论 javascript 中数组的声明、转换、排序、合并、迭代等基本操作。"
-type: "posts"    # posts | series
+type: posts
 tags: [array, javascript]
 series: false
-author: "Gl"
+author: GauLiang
 cover: false
 ---
 

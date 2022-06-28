@@ -3,10 +3,10 @@ title: "Ubuntu 18.04 安装 Java 环境 - OpenJDK"
 date: 2020-01-21T00:20:08+08:00
 draft: false
 description: "Java 和 JVM（Java 的虚拟机）被广泛使用，本文介绍如何使用 apt-get 安装不同版本的 Open JRE 和 Open JDK。JRE 仅用于提供 Java 应用程序执行环境，如果要编译 Java 应用程序，则要安装 JDK。"
-type: "posts"    # posts | series
+type: posts
 tags: ["Java"]
 series: false
-author: "Gl"
+author: GauLiang
 cover: false
 ---
 

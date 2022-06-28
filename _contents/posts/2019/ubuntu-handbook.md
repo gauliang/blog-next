@@ -1,16 +1,17 @@
 ---
-title: Ubuntu 19.04 常见操作指南
+title: Ubuntu 常用配置指南
 author: 高国良
 type: posts
 series: false
 date: 2019-09-06T12:04:00.791Z
 tags: [linux,ubuntu]
-description: <img src="https__ERR__//img2018.cnblogs.com/blog/634103/201909/634103-20190908182418386-695298629.jpg" class="desc_img">
+description: 配置指南
 draft: false 
 cover: false
 ---
 
 ![](cover.jpg)
+
 ## 一、基本系统设置
 
 ```bash

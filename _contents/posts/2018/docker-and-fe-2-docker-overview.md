@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2018-09-10T23:03:00.791Z
-tags: [docker, linux, fe]
+tags: [docker, linux]
 description: Docker 相关的基础知识点非常多，比如基本概念，镜像管理，数据卷（容器）管理，常用命令，周边生态等等。在这里梳理出个大概框架，方便后续学习使用。《Docker 与前端》系列文章，旨在分享学习如何通过 docker 构建一个相对完备的前端自动化开发环境。
 draft: false 
 cover: false

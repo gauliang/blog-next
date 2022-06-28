@@ -1,6 +1,6 @@
 ---
 title: JQuery 滚动条插件 perfect-scrollbar
-author: Gauliang
+author: GauLiang
 type: posts
 series: false
 date: 2014-07-24T09:10:00.791Z

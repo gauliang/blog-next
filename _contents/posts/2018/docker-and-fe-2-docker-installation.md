@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2018-08-07T17:35:00.791Z
-tags: [linux, docker, fe]
+tags: [linux, docker]
 description: Docker 作为一种新兴的虚拟化方式，跟传统的虚拟化方式相比具有众多优势。《Docker 与前端》系列文章，旨在记录如何通过 docker 构建一个相对完备的前端自动化开发环境。
 draft: false 
 cover: false

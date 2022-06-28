@@ -3,10 +3,10 @@ title: "ECMAScript Modules"
 date: 2020-09-07T17:14:01+08:00
 draft: false
 description: "ES6 中首次内置了对模块的支持。从理论上讲，ECMAScript模块应该在所有JavaScript环境中通用。实际上，浏览器仍然是ES模块的主要目标。"
-type: "posts"    # posts | series
+type: posts
 tags: [esm, javascript]
 series: false
-author: "Gl"
+author: GauLiang
 cover: false
 ---
 

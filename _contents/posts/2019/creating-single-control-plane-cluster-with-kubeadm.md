@@ -2,11 +2,11 @@
 title: "使用 kubeadm 安装单控制平面 Kubernetes 集群"
 date: 2020-01-19T20:30:54+08:00
 draft: false
-description: "本文主要介绍如何使用 kubeadm 安装部署单控制平面 Kubernetes v1.17.0 集群，所谓单控制平面，顾名思义就是由一个 Control-plane Node 和多个 Work Node 组成的 Kubernetes 集群。"
-type: "posts"    # posts | series
+description: 所谓单控制平面，顾名思义就是由一个 Control-plane Node 和多个 Work Node 组成的 Kubernetes 集群。
+type: posts
 tags: ["kubernetes", "docker", "ingress-nginx"]
 series: false
-author: "Gl"
+author: GauLiang
 cover: "cover.png"
 ---
 
