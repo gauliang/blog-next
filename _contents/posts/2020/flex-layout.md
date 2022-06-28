@@ -4,7 +4,7 @@ date: 2020-10-25T16:06:20+08:00
 draft: false
 description: "在 CSS3 中加入了 Flex 布局能力，使得实现弹性布局变得轻而易举，本文将全面深入介绍 flex 在的布局中的使用。"
 type: "posts"    # posts | series
-tags: ['css','flex','layout']
+tags: ['css','layout']
 series: false
 author: "Gl"
 cover: 'cover.jpg'

@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2017-06-19T00:20:00.791Z
-tags: [javascript, web, ES6, ES2015]
+tags: [javascript, web, ES6]
 description: ES 2015/6 新增内容还是比较多的，这里仅大纲性的列举一下（不一定全面）这些特性。其实，每个点挖进去都会有很多学问在里头，本文旨在汇总，所以不对这些特性进行深层次的讨论及研究。随后有时间的话，在单独写几篇博客对常用的点进行深挖，与大家进行深度交流。
 draft: false 
 cover: false
@@ -78,7 +78,7 @@ class Rectangle {
 
 `Mix-ins` 混合
 
-## 增强的对象���面量
+## 增强的对象字面量
 
 通过字面量形式可以实现，定义prototype、键值对简写、定义方法等、动态属性名称。
 
