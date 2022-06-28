@@ -4,13 +4,13 @@ author: 高国良
 type: posts
 series: false
 date: 2017-02-05T21:58:00.791Z
-tags: [laravel, php, 调试, vagrant, Nginx, debug, visualstudio, vscode]
+tags: [laravel, php, vagrant, Nginx, debug, vscode]
 description: 通过 visualstudio 实现对基于 homestead 环境的 laravel 项目进行开发调试。本文重点讨论如何通过配置 visualstudio code、 homestead、Xdebug 以实现对 laravel 项目的调试，并不讨论涉本文中涉及到的其他软件的安装及部署细节。
 draft: false 
 cover: false
 ---
 
-![](http://images2015.cnblogs.com/blog/634103/201702/634103-20170205214846386-672049439.jpg)
+![](634103-20170205214846386-672049439.jpg)
 
 由于之前做 .net 开发比较熟悉 visualstudio，所以自 visualstudio code 发布后就一直在不同场合使用 vscode ，比如前端、node等等。最近在做 laravel 项目，需要通过 vscode 来调试 homestead 中的 laravel 代码。做了一些有关 laravel 调试环境安装部署的尝试，本文是一个简要记录。
 
@@ -78,7 +78,7 @@ $ vagrant up
 $ vagrant ssh
 ```
 
-## **安装 XDebug**
+## 安装 XDebug
 
 ```
 注：homestead 已集成了 XDebug，文件位置在 /usr/lib/php/20160303/xdebug.so 目录中。如果你不需要更新版本的 Xdebug 功能，可以忽略此步骤。
@@ -117,13 +117,13 @@ xdebug.remote_port = 9000
 
 **xdebug.remote\_enable** 启用远程调试；
 
-**xdebug.remote\_autostart** 默认情况下需要通过指定 HTTP GET/POST 变量来启用远程调试，通过把该选项配置为 1 可以使所有请求自动连接至调试终端而无需指定专属变量信息。详情见：[Remote Debugging](https://xdebug.org/docs/remote#browser_session)；
+**xdebug.remote\_autostart** 默认情况下需要通过指定 HTTP GET/POST 变量来启用远程调试，通过把该选项配置为 1 可以使所有请求自动连接至调试终端而无需指定专属变量信息。详情见：[Remote Debugging](https://xdebug.org/docs/remote)；
 
 **xdebug.remote\_host** 默认取值 localhost ，由于我们的 homestead 在虚拟机中，并且以`config.vm.network "private_network"`形式配置了IP ，所以这里不能配置 localhost。需要手动指定 PC 机 IP 192.168.10.1；
 
 **xdebug.remote\_port** 默认端口号是 9000，这个在前面的 vscode 配置文件 launch.json 中有设置，与其对应即可。
 
-## 重启web服务Nginx
+## 重启web服务 Nginx
 
 ```
 $ nginx -s reload
@@ -140,7 +140,3 @@ $ nginx -s reload
 ## 最后
 
 本文地址：http://www.cnblogs.com/kelsen/p/6368550.html
-
-如果您有任何建议或疑问请在下面留言交流。
-
-![](chrome-extension://fnjoonbenhhijnoegpfkpagjamomgjjm/static/sound.svg)
