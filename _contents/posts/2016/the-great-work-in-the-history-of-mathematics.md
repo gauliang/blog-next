@@ -1,10 +1,10 @@
 ---
-title: 数学历史上的巨著整理汇总
+title: 数学历史上的巨著 - 整理
 author: 高国良
 type: posts
 series: false
 date: 2016-11-12T17:12:00.791Z
-tags: [古希腊, 几何, 数学]
+tags: [math]
 description: 本文旨在收集整理数学历史上的著名著作，便于对数学有浓厚兴趣的朋友查阅和阅读。后续有时间的话会为每本书都配上一个简短的说明，便于大家了解其内容。
 draft: false 
 cover: false

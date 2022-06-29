@@ -4,8 +4,8 @@ author: 高国良
 type: posts
 series: false
 date: 2016-11-12T14:38:00.791Z
-tags: [无理数, 古希腊, 几何]
-description: 要弄清楚这个问题，我们得先认识一个人。古希腊大数学家 欧多克索斯，其在整个古代仅次于阿基米德，是一位天文学家、医生、几何学家、立法家和地理学家。
+tags: [math]
+description: 对古希腊人来说，x² 和 x³ 这些量只有几何意义。
 draft: false 
 cover: false
 ---
