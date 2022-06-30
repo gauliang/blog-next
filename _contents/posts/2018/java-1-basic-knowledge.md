@@ -5,7 +5,7 @@ type: posts
 series: false
 date: 2018-10-04T09:05:00.791Z
 tags: [java]
-description: java 语言规范及相关文档资源 Java源码：安装目录下 src.zip 文件 java文档：https__ERR__//docs.oracle.com/en/java/ 语言规范：http__ERR__//docs.oracle.com/javase/specs JAVASE文档：https__ERR__//docs.oracle
+description: false
 draft: false 
 cover: false
 ---
@@ -29,7 +29,8 @@ public class App{
 }
 ```
 
-`public` 是访问修饰符，声明这段代码的访问级别。在这里类 `App` 作为装载程序逻辑的容器，以驼峰命名法命名（java 区分大小写）,Java 中所有程序内容都须放置在类中。与其他语言一样，这里的`main`方法是程序入口，必须存在，且是静态方法，`args` 存储来自命令行的参数。`{}`用以划分代码块，`.`用以调用方法。
+`public` 是访问修饰符，声明这段代码的访问级别。在这里类 `App` 作为装载程序逻辑的容器，以驼峰命名法命名（java 区分大小写）,Java 中所有程序内容都须放置在类中。
+与其他语言一样，这里的 `main` 方法是程序入口，必须存在，且是静态方法，`args` 存储来自命令行的参数。`{}`用以划分代码块，`.`用以调用方法。
 
 ## 二、数据类型
 
@@ -45,6 +46,7 @@ public class App{
 | byte | 1字节 |
 | float | 4 字节 |
 | double | 8字节 |
+
 2. char
 3. boolean
 
