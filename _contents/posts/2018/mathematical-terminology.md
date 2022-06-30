@@ -5,7 +5,7 @@ type: posts
 series: false
 date: 2018-07-26T12:36:00.791Z
 tags: [math]
-description: 整理和收集常用数学术语的中英文表达对照信息。
+description: 整理和收集常用数学术语的中英文表达对照信息，旨在为大家阅读英文数学材料提供方便。
 draft: false 
 cover: false
 ---
