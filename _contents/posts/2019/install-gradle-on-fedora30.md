@@ -5,7 +5,7 @@ type: posts
 series: false
 date: 2019-05-12T15:07:00.791Z
 tags: [Gradle,java,linux]
-description: 当前的 Gradle 最新版本是5.4.1。您可以从发布页面下载所有 Gradle 版本的二进制文件和查看文档。 先决条件 Gradle 能够在所有主流操作系统上运行，只要具备 Java JDK/JRE 环境即可，Java 版本必须为 8或更高。 安装 1、下载 Gradle 目前的Gradle版本
+description: Gradle 能够在所有主流操作系统上运行，只要具备 Java JDK/JRE 环境即可，Java 版本必须为 8或更高。
 draft: false 
 cover: false
 ---
@@ -18,7 +18,7 @@ Gradle 能够在所有主流操作系统上运行，只要具备 Java-JDK/JRE �
 
 ```bash
 # 要检查 Java 环境及版本新
-$ java -version
+java -version
 java version "1.8.0_121"
 ```
 
@@ -34,14 +34,14 @@ java version "1.8.0_121"
 ### 2、解压文件
 
 ```bash
-$ sudo mkdir /opt/gradle
-$ sudo unzip -d /opt/gradle gradle-5.4.1-bin.zip
+sudo mkdir /opt/gradle
+sudo unzip -d /opt/gradle gradle-5.4.1-bin.zip
 ```
 ### 3、配置系统环境
 
 ```bash
- $ export PATH=$PATH:/opt/gradle/gradle-5.4.1/bin
-$ gradle -v
+export PATH=$PATH:/opt/gradle/gradle-5.4.1/bin
+gradle -v
 ------------------------------------------------------------
 Gradle 5.4.1
 ------------------------------------------------------------

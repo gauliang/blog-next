@@ -77,7 +77,7 @@ chmod 600 /etc/gitlab/ssl/registry.gitlab.example.com.*
 
 TLS证书到位后，编辑/etc/gitlab/gitlab.rb：
 
-```rg
+```rb
 registry_external_url 'https://registry.gitlab.example.com'
 ```
 

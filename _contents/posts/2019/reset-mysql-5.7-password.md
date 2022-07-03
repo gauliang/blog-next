@@ -5,7 +5,7 @@ type: posts
 series: false
 date: 2019-05-13T18:48:00.791Z
 tags: [mysql, password]
-description: 一、以安全模式登录 二、修改密码 三、重启数据库
+description: false
 draft: false 
 cover: false
 ---

@@ -4,13 +4,13 @@ date: 2020-01-19T20:30:54+08:00
 draft: false
 description: 所谓单控制平面，顾名思义就是由一个 Control-plane Node 和多个 Work Node 组成的 Kubernetes 集群。
 type: posts
-tags: ["kubernetes", "docker", "ingress-nginx"]
+tags: [kubernetes, docker, ingress-nginx]
 series: false
 author: GauLiang
 cover: "cover.png"
 ---
 
-![部署单控制平面 k8s 集群，并安装 Dashboard 和 ingress-nginx 使外部浏览器可以访问集群。](cover.png)
+![部署单控制平面 k8s 集群，安装 Dashboard 和 ingress-nginx 使外部浏览器可以访问集群。](cover.png)
 
 ## 一、拓扑结构
 
@@ -23,11 +23,13 @@ cover: "cover.png"
 
 ![高可用拓扑结构（外部独立 etcd 数据库集群）](kubeadm-ha-topology-external-etcd.svg)
 
-高可用部署与单控制平面部署不同，不过，除负载均衡及多 kube-apiserver 部分外，其他流程大同小异。有关高可用安装的更多信息请参考 [Creating Highly Available clusters with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/)。
+高可用部署与单控制平面部署不同，不过，除负载均衡及多 kube-apiserver 部分外，其他流程大同小异。
+有关高可用安装的更多信息请参考 [Creating Highly Available clusters with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/)。
 
 ## 二、准备工作
 
-硬件要求，建议 4 核以上 CPU，8GB 以上内存，Ubuntu 16.04 以上或 CentOS 7 以上版本的操作系统，确保所有服务器间网络通信正常，1 台服务器作为控制平面节点，其余若干台服务器作为工作节点，我这里准备了4个工作节点。基本信息如下：
+硬件要求，建议 4 核以上 CPU，8GB 以上内存，Ubuntu 16.04 以上或 CentOS 7 以上版本的操作系统，
+确保所有服务器间网络通信正常，1 台服务器作为控制平面节点，其余若干台服务器作为工作节点，我这里准备了4个工作节点。基本信息如下：
 
 | 名称 | CPU | 内存 | IP | OS | 安装 | 用途 |
 | --- | --- | --- | --- | --- | --- | --- |

@@ -5,12 +5,12 @@ type: posts
 series: false
 date: 2019-05-09T07:33:00.791Z
 tags: [rancher, kubernetes, docker]
-description: 对于生产环境，需以高可用的配置安装 Rancher，确保用户始终可以访问 Rancher Server。当安装在Kubernetes集群中时，Rancher将与集群的 etcd 集成，并利用Kubernetes 调度实现高可用。
+description: 当安装在 Kubernetes 集群中时，Rancher 将与集群的 etcd 集成，并利用 Kubernetes 调度实现高可用。
 draft: false 
 cover: false
 ---
 
-对于生产环境，需以高可用的配置安装 Rancher，确保用户始终可以访问 Rancher Server。当安装在Kubernetes集群中时，Rancher将与集群的 etcd 集成，并利用Kubernetes 调度实现高可用。
+对于生产环境，需以高可用的配置安装 Rancher，确保用户始终可以访问 Rancher Server。当安装在 Kubernetes 集群中时，Rancher将与集群的 etcd 集成，并利用Kubernetes 调度实现高可用。
 
 为确保高可用，本文所部署的 Kubernetes 集群将专用于运行 Rancher ，Rancher 运行起来后，可再创建或导入集群以运行具体的工作负载。
 

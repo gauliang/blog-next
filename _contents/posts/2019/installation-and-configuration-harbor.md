@@ -5,7 +5,7 @@ type: posts
 series: false
 date: 2019-05-12T22:54:00.791Z
 tags: [docker]
-description: Harbor can be installed by one of three approaches__ERR__ Online installer__ERR__ The installer downloads Harbor's images from Docker hub. For this reason, the in
+description: Harbor is an open source trusted cloud native registry project that stores, signs, and scans content. 
 draft: false 
 cover: false
 ---
@@ -25,21 +25,28 @@ If you run a previous version of Harbor, you may need to update ```harbor.cfg```
 In addition, the deployment instructions on Kubernetes has been created by the community. 
 
 ## Prerequisites for the target host
+
 Harbor is deployed as several Docker containers, and, therefore, can be deployed on any Linux distribution that supports Docker. The target host requires Python, Docker, and Docker Compose to be installed.  
+
 ### Hardware
+
 |Resource|Capacity|Description|
 |---|---|---|
 |CPU|minimal 2 CPU|4 CPU is preferred|
 |Mem|minimal 4GB|8GB is preferred|
 |Disk|minimal 40GB|160GB is preferred|
+
 ### Software
+
 |Software|Version|Description|
 |---|---|---|
 |Python|version 2.7 or higher|Note that you may have to install Python on Linux distributions (Gentoo, Arch) that do not come with a Python interpreter installed by default|
 |Docker engine|version 17.03.0-ce+ or higher|For installation instructions, please refer to: https://docs.docker.com/engine/installation/|
 |Docker Compose|version 1.18.0 or higher|For installation instructions, please refer to: https://docs.docker.com/compose/install/|
 |Openssl|latest is preferred|Generate certificate and keys for Harbor|
+
 ### Network ports 
+
 |Port|Protocol|Description|
 |---|---|---|
 |443|HTTPS|Harbor portal and core API will accept requests on this port for https protocol|
@@ -55,7 +62,7 @@ The installation steps boil down to the following
 3. Run **install.sh** to install and start Harbor;
 
 
-#### Downloading the installer:
+### Downloading the installer:
 
 The binary of the installer can be downloaded from the [release](https://github.com/goharbor/harbor/releases) page. Choose either online or offline installer. Use *tar* command to extract the package.
 
@@ -68,7 +75,7 @@ Offline installer:
     $ tar xvf harbor-offline-installer-<version>.tgz
 ```
 
-#### Configuring Harbor
+### Configuring Harbor
 Configuration parameters are located in the file **harbor.cfg**. 
 
 There are two categories of parameters in harbor.cfg, **required parameters** and **optional parameters**.  
@@ -83,7 +90,7 @@ is started. In particular, you must set the desired **auth_mode** before registe
 
 The parameters are described below - note that at the very least, you will need to change the **hostname** attribute. 
 
-##### Required parameters:
+#### Required parameters:
 
 * **hostname**: The target host's hostname, which is used to access the Portal and the registry service. It should be the IP address or the fully qualified domain name (FQDN) of your target machine, e.g., `192.168.1.10` or `reg.yourdomain.com`. _Do NOT use `localhost` or `127.0.0.1` for the hostname - the registry service needs to be accessible by external clients!_ 
 * **ui_url_protocol**: (**http** or **https**.  Default is **http**) The protocol used to access the Portal and the token/notification service.  If Notary is enabled, this parameter has to be _https_.  By default, this is _http_. To set up the https protocol, refer to **[Configuring Harbor with HTTPS Access](configure_https.md)**.  
@@ -100,7 +107,7 @@ The parameters are described below - note that at the very least, you will need 
 * **no_proxy**: Config no proxy for Clair, e.g. `127.0.0.1,localhost,core,registry`.
 * **harbor_admin_password**: The administrator's initial password. This password only takes effect for the first time Harbor launches. After that, this setting is ignored and the administrator's password should be set in the Portal. _Note that the default username/password are **admin/Harbor12345** ._   
 
-#### Configuring storage backend (optional)
+### Configuring storage backend (optional)
 
 By default, Harbor stores images on your local filesystem. In a production environment, you may consider 
 using other storage backend instead of the local filesystem, like S3, OpenStack Swift, Ceph, etc.
@@ -118,10 +125,10 @@ registry_storage_provider_config="username: admin, password: ADMIN_PASS, authurl
 
 _NOTE: For detailed information on storage backend of a registry, refer to [Registry Configuration Reference](https://docs.docker.com/registry/configuration/) ._
 
-#### Finishing installation and starting Harbor
+### Finishing installation and starting Harbor
 Once **harbor.cfg** and storage backend (optional) are configured, install and start Harbor using the ```install.sh``` script.  Note that it may take some time for the online installer to download Harbor images from Docker hub.  
 
-##### Default installation (without Notary/Clair)
+### Default installation (without Notary/Clair)
 Harbor has integrated with Notary and Clair (for vulnerability scanning). However, the default installation does not include Notary or Clair service.
 
 ```sh
@@ -137,7 +144,7 @@ $ docker push reg.yourdomain.com/myproject/myrepo:mytag
 ```
 **IMPORTANT:** The default installation of Harbor uses _HTTP_ - as such, you will need to add the option `--insecure-registry` to your client's Docker daemon and restart the Docker service. 
 
-##### Installation with Notary
+### Installation with Notary
 To install Harbor with Notary service, add a parameter when you run ```install.sh```:
 ```sh
     $ sudo ./install.sh --with-notary
@@ -147,7 +154,7 @@ To install Harbor with Notary service, add a parameter when you run ```install.s
 More information about Notary and Docker Content Trust, please refer to Docker's documentation: 
 https://docs.docker.com/engine/security/trust/content_trust/
 
-##### Installation with Clair
+### Installation with Clair
 To install Harbor with Clair service, add a parameter when you run ```install.sh```:
 ```sh
     $ sudo ./install.sh --with-clair
@@ -156,7 +163,7 @@ To install Harbor with Clair service, add a parameter when you run ```install.sh
 For more information about Clair, please refer to Clair's documentation: 
 https://coreos.com/clair/docs/2.0.1/
 
-##### Installation with chart repository service
+### Installation with chart repository service
 To install Harbor with chart repository service, add a parameter when you run ```install.sh```:
 ```sh
     $ sudo ./install.sh --with-chartmuseum
@@ -169,7 +176,7 @@ To install Harbor with chart repository service, add a parameter when you run ``
 
 For information on how to use Harbor, please refer to **[User Guide of Harbor](user_guide.md)** .
 
-#### Configuring Harbor with HTTPS access
+### Configuring Harbor with HTTPS access
 Harbor does not ship with any certificates, and, by default, uses HTTP to serve requests. While this makes it relatively simple to set up and run - especially for a development or testing environment - it is **not** recommended for a production environment.  To enable HTTPS, please refer to **[Configuring Harbor with HTTPS Access](configure_https.md)**.  
 
 
@@ -177,7 +184,7 @@ Harbor does not ship with any certificates, and, by default, uses HTTP to serve 
 You can use docker-compose to manage the lifecycle of Harbor. Some useful commands are listed as follows (must run in the same directory as *docker-compose.yml*).
 
 Stopping Harbor:
-```
+```bash
 $ sudo docker-compose stop
 Stopping nginx              ... done
 Stopping harbor-portal      ... done
@@ -190,7 +197,7 @@ Stopping harbor-db          ... done
 Stopping harbor-log         ... done
 ```  
 Restarting Harbor after stopping:
-```
+```bash
 $ sudo docker-compose start
 Starting log         ... done
 Starting registry    ... done
@@ -204,7 +211,7 @@ Starting proxy       ... done
 ```  
 
 To change Harbor's configuration, first stop existing Harbor instance and update ```harbor.cfg```. Then run ```prepare``` script to populate the configuration. Finally re-create and start Harbor's instance:
-```
+```bash
 $ sudo docker-compose down -v
 $ vim harbor.cfg
 $ sudo prepare
@@ -212,12 +219,14 @@ $ sudo docker-compose up -d
 ``` 
 
 Removing Harbor's containers while keeping the image data and Harbor's database files on the file system:
-```
+
+```bash
 $ sudo docker-compose down -v
 ```  
 
 Removing Harbor's database and image data (for a clean re-installation):
-```sh
+
+```bash
 $ rm -r /data/database
 $ rm -r /data/registry
 ```
@@ -225,11 +234,14 @@ $ rm -r /data/registry
 #### _Managing lifecycle of Harbor when it's installed with Notary_ 
 
 When Harbor is installed with Notary, an extra template file ```docker-compose.notary.yml``` is needed for docker-compose commands. The docker-compose commands to manage the lifecycle of Harbor are:
-```
+
+```bash
 $ sudo docker-compose -f ./docker-compose.yml -f ./docker-compose.notary.yml [ up|down|ps|stop|start ]
 ```
+
 For example, if you want to change configuration in ```harbor.cfg``` and re-deploy Harbor when it's installed with Notary, the following commands should be used:
-```sh
+
+```bash
 $ sudo docker-compose -f ./docker-compose.yml -f ./docker-compose.notary.yml down -v
 $ vim harbor.cfg
 $ sudo prepare --with-notary
