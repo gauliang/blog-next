@@ -4,7 +4,7 @@ author: 高国良
 type: posts
 series: false
 date: 2015-03-26T14:03:00.791Z
-tags: [centos,apache，Linux]
+tags: [centos,apache, Linux]
 description: 下载、解压、处理依赖、编译、添加服务
 draft: false 
 cover: false

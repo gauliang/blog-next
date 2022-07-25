@@ -2,8 +2,7 @@
 title: "深入 Webpack"
 date: 2020-11-05T08:34:50+08:00
 draft: false
-description: "大多数情况下，网站不再只是用带有一些可选 JavaScript 的纯 HTML 编写，它们通常完全由 JavaScript
-构建。因此，我们必须将代码打包，最小化和翻译成所有浏览器都能理解的东西，这就是webpack的用武之地。"
+description: "大多数情况下，网站不再只是用带有一些可选 JavaScript 的纯 HTML 编写，它们通常完全由 JavaScript 构建。"
 type: posts
 tags: [webpack,devops,node.js,esm]
 series: false

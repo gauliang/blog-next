@@ -118,6 +118,14 @@ Fiber 相关资料：
 
 React 在原生事件基础上进行了封装，以抹平浏览器间差异。其源码在 `packages/react-dom/src/events` 目录下。
 
+## Virtual DOM
+
+Virtual DOM 是一种编程概念。在这个概念里， UI 以一种理想化的，或者说“虚拟的”表现形式被保存于内存中，并通过如 ReactDOM 等类库使之与“真实的” DOM 同步。
+这一过程叫做[协调](https://zh-hans.reactjs.org/docs/reconciliation.html)。
+
+这种方式赋予了 React 声明式的 API：您告诉 React 希望让 UI 是什么状态，React 就确保 DOM 匹配该状态。
+
+
 ## 参考
 
 - https://reactjs.org/docs/codebase-overview.html#renderers

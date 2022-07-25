@@ -2,17 +2,18 @@
 title: "深入 React Redux"
 date: 2020-11-15T08:24:14+08:00
 draft: false
-description: "React Redux是React的官方Redux UI绑定库 。 如果您同时使用Redux和React，则还应该使用React Redux绑定这两个库。"
+description: "React Redux 是 React 的官方 Redux UI 绑定库 。 如果您同时使用 Redux 和 React，则还应该使用 React Redux 绑定这两个库。"
 type: posts
-tags: [react, redux, flux, javascript, node.js]
+tags: [react, redux, flux, javascrip]
 series: false
 author: GauLiang
 cover: "dive-react-redux.jpg"
 ---
 
 ![深入 Redux](dive-react-redux.jpg)
-要谈论 react-redux 得先从了解 flux 和 redux 开始，flux 本身是一种架构模式，redux 是一个实现了 Flux 架构模式的面向 JS 的通用状态管理器，
-react-redux 提供了一种机制使得我们能够更方便的在 react 中使用 Redux。
+
+要谈论 React-redux 得先从了解 Flux 和 Redux 开始，flux 本身是一种架构模式，Redux 是一个实现了 Flux 架构模式的面向 JS 的通用状态管理器，
+react-redux 提供了一种机制使得我们能够更方便的在 React 中使用 Redux。
 
 ## Flux 模型
 

@@ -4,7 +4,7 @@ date: 2020-09-05T16:04:37+08:00
 draft: false
 description: 当我们提及模块化时，通常意味着是由一组高度分离的，不同的功能块存储在模块中组成的。在可能的情况下，通过松散耦合消除依赖关系简化应用程序的可维护性。
 type: posts
-tags: [javascript, node.js, CommonJS, esm, amd, umd]
+tags: [javascript, module]
 series: false
 author: GauLiang
 cover: '001.jpg'
