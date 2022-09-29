@@ -5,12 +5,12 @@ type: posts
 series: false
 date: 2022-09-20T14:55:43.412Z
 tags: [lru]
-description: LRU 是 Least Recently Used 的缩写，即最近最少使用。它的基本思想是长期不被使用的数据，在未来被用到的几率也不大，所以当新的数据进来时我们可以优先把这些数据替换掉。
-draft: true
+description: LRU 是 Least Recently Used 的缩写，即最近最少使用。作为一种经典的缓存策略，它的基本思想是长期不被使用的数据，在未来被用到的几率也不大，所以当新的数据进来时我们可以优先把这些数据替换掉。
+draft: false
 cover: false
 ---
 
-LRU 是 Least Recently Used 的缩写，即最近最少使用。它的基本思想是长期不被使用的数据，在未来被用到的几率也不大，所以当新的数据进来时我们可以优先把这些数据替换掉。
+LRU 是 Least Recently Used 的缩写，即最近最少使用。作为一种经典的缓存策略，它的基本思想是长期不被使用的数据，在未来被用到的几率也不大，所以当新的数据进来时我们可以优先把这些数据替换掉。
 
 ## 基本要求
 
