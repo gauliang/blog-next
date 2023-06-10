@@ -5,7 +5,7 @@ import { HeroBanner } from '../components/hero-banner'
 import { BsBrightnessAltHigh, BsHeartFill } from 'react-icons/bs'
 import { Params } from 'next/dist/server/router'
 import Link from 'next/link'
-import { getAllSeries } from '../lib/posts'
+import { getAllSeriesWithPost } from '../lib/posts'
 
 const Series = ({ series }: Params) => {
 
@@ -73,7 +73,7 @@ export default Series
 
 export async function getStaticProps() {
 
-    const series = getAllSeries()
+    const series = getAllSeriesWithPost()
     return {
         props: {
             series

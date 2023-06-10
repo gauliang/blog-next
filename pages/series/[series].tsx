@@ -2,7 +2,7 @@ import { Params } from 'next/dist/server/router'
 import Head from 'next/head'
 
 import Layout from '../../components/layout'
-import { getAllSeries, getAllTags } from '../../lib/posts'
+import { getAllSeriesWithPost, getAllTags } from '../../lib/posts'
 import { BackToTop } from '../../components/back-to-top'
 import { PostList } from '../../components/post-list'
 import { HeroBanner } from '../../components/hero-banner'
@@ -32,7 +32,7 @@ export default Page
 
 export async function getStaticProps({ params }: Params) {
 
-    const allSeries = getAllSeries()
+    const allSeries = getAllSeriesWithPost()
     
     const series = allSeries.find(series => {
         return series.name === params.series.toLowerCase()
@@ -46,7 +46,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-    const allSeries = getAllSeries()
+    const allSeries = getAllSeriesWithPost()
     const paths = allSeries.map(series => {
         return {
             params: {

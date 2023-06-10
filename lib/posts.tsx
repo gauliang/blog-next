@@ -114,7 +114,7 @@ export function getAllTags() {
     return list
 }
 
-export function getAllSeries() {
+export function getAllSeriesWithPost() {
     const allPosts = getAllFrontMatterByType('series')
     const data: any = {}
 
