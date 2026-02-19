@@ -140,3 +140,101 @@ export function getAllSeriesWithPost() {
 
     return list
 }
+
+// Write an Amis schema to generate a form
+export function getSchemaFromFrontMatter(frontMatter: any) {
+    const schema = {
+        type: 'page',
+        title: 'Edit Post',
+        body: {
+            type: 'form',
+            api: {
+                method: 'post',
+                url: '/api/save-post'
+            },
+            controls: [
+                {
+                    type: 'text',
+                    name: 'title',
+                    label: 'Title',
+                    required: true,
+                    validations: {
+                        minLength: 2,
+                        maxLength: 100
+                    },
+                    value: frontMatter.title
+                },
+                {
+                    type: 'text',
+                    name: 'slug',
+                    label: 'Slug',
+                    required: true,
+                    validations: {
+                        minLength: 2,
+                        maxLength: 100
+                    },
+                    value: frontMatter.slug
+                },
+                {
+                    type: 'text',
+                    name: 'date',
+                    label: 'Date',
+                    required: true,
+                    value: frontMatter.date
+                },
+                {
+                    type: 'text',
+                    name: 'tags',
+                    label: 'Tags',
+                    required: true,
+                    value: frontMatter.tags.join(',')
+                },
+                {
+                    type: 'text',
+                    name: 'series',
+                    label: 'Series',
+                    required: false,
+                    value: frontMatter.series
+                },
+                {
+                    type: 'checkbox',
+                    name: 'draft',
+                    label: 'Draft',
+                    value: frontMatter.draft
+                },
+                {
+                    type: 'textarea',
+                    name: 'content',
+                    label: 'Content',
+                    required: true,
+                    validations: {
+                        minLength: 2,
+                        maxLength: 100000
+                    },
+                    value: frontMatter.content
+                }
+            ]
+        }
+    }
+
+    return schema
+}
+
+// q: What is ChatGPT?
+// a: ChatGPT is a chatbot trained on 117M+ Reddit comments. It is a smaller version of GPT-2 trained on a single GPU. It is a 774M parameter model, compared to GPT-2's 1.5B parameters. It is trained on a single GPU, compared to GPT-2's 8 GPU's. It is trained on 117M comments, compared to GPT-2's 40GB of text. It is trained on Reddit comments, compared to GPT-2's WebText dataset. It is trained on 1.5B tokens, compared to GPT-2's 8B tokens.
+
+// q: What is GPT-2?
+// a: GPT-2 is a large transformer-based language model with 1.5 billion parameters, trained on a dataset of 8 million web pages. GPT-2 is trained with a simple objective: predict the next word, given all of the previous words within some text. The diversity of the dataset causes this simple goal to contain naturally occurring demonstrations of many tasks across diverse domains. GPT-2 is a direct scale-up of GPT, with more than 10X the parameters and trained on more than 10X the amount of data.
+
+// q: What is GPT-3?
+// a: GPT-3 is a large transformer-based language model with 175 billion parameters, trained on a dataset of 570GB of text from the internet. GPT-3 is trained with a simple objective: predict the next word, given all of the previous words within some text. The diversity of the dataset causes this simple goal to contain naturally occurring demonstrations of many tasks across diverse domains. GPT-3 is a direct scale-up of GPT-2, with more than 100X the parameters and trained on more than 100X the amount of data.
+
+// q: What is GPT-Neo?
+// a: GPT-Neo is a transformer-based language model with 2.7 billion parameters, trained on a dataset of 45GB of text from the internet. GPT-Neo is trained with a simple objective: predict the next word, given all of the previous words within some text. The diversity of the dataset causes this simple goal to contain naturally occurring demonstrations of many tasks across diverse domains. GPT-Neo is a direct scale-up of GPT-2, with more than 100X the parameters and trained on more than 100X the amount of data.
+
+// q: What is GitHub Copilot?
+// a: GitHub Copilot is a new AI pair programmer that helps you write better code. GitHub Copilot draws context from the code you’re working on, suggesting whole lines or entire functions. GitHub Copilot is powered by OpenAI Codex, a new AI system created by OpenAI. OpenAI Codex has been trained on a selection of English language and source code from publicly available sources, including code in public repositories on GitHub. GitHub Copilot works with a broad set of frameworks and languages, including Python, JavaScript, TypeScript, Ruby, and Go.
+
+// q: What is OpenAI Codex?
+// a: OpenAI Codex is a new AI system created by OpenAI. OpenAI Codex has been trained on a selection of English language and source code from publicly available sources, including code in public repositories on GitHub. OpenAI Codex is a descendant of GPT-3, the language model that OpenAI trained on 175 billion parameters. OpenAI Codex is a descendant of GPT-2, the language model that OpenAI trained on 1.5 billion parameters. OpenAI Codex is a descendant of GPT, the language model that OpenAI trained on 117 million parameters.
+
