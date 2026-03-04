@@ -1,10 +1,18 @@
 {
     "series": [
         {
+            "name": "ai",
+            "title": "AI",
+            "description": "AI 相关系列文章",
+            "status": "进行中",
+            "image": "/attachments/series/ai.png"
+        },
+        {
             "name": "react",
-            "title":"深入 React",
+            "title": "深入 React",
             "description": "深入 React 系列之源码",
-            "image":"/attachments/series/react.jpg"
+            "status": "已下线",
+            "image": "/attachments/series/react.jpg"
         }
     ]
 }
