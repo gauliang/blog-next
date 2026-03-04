@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import { BsArrowRight } from 'react-icons/bs'
+import { BsChevronDoubleDown } from 'react-icons/bs'
 import { BackToTop } from '../components/back-to-top'
 import { HeroBanner } from '../components/hero-banner'
 import Layout from '../components/layout'
@@ -29,8 +29,8 @@ const Home: NextPage = ({ posts }: any) => {
                 <div className="flex justify-center my-16">
                     <Link href={{ pathname: '/blogs/page/2' }}>
                         <a className="inline-flex items-center px-12 py-3 border text-gray-600 rounded-full hover:text-blue-600 hover:border-blue-600 transition-colors">
-                            查看更多
-                            <BsArrowRight className="ml-2" />
+                            查看更多文章
+                            <BsChevronDoubleDown className="ml-2" />
                         </a>
                     </Link>
                 </div>
