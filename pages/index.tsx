@@ -26,6 +26,14 @@ const Home: NextPage = ({ posts }: any) => {
 
             <main className='mx-5 md:mx-20'>
                 <PostList posts={posts} />
+                <div className="flex justify-center my-16">
+                    <Link href={{ pathname: '/blogs/page/2' }}>
+                        <a className="inline-flex items-center px-12 py-3 border text-gray-600 rounded-full hover:text-blue-600 hover:border-blue-600 transition-colors">
+                            查看更多
+                            <BsArrowRight className="ml-2" />
+                        </a>
+                    </Link>
+                </div>
             </main>
             <BackToTop />
         </Layout>
