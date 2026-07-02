@@ -13,6 +13,9 @@ fi
 echo "[deploy] 构建静态站点..."
 npm run build
 
+echo "[deploy] 创建 .nojekyll 以禁用 GitHub Pages Jekyll 处理..."
+touch out/.nojekyll
+
 echo "[deploy] 同步静态文件到子模块..."
 rsync -a --delete --exclude='.git' out/ "$SUBMODULE_DIR/"
 
