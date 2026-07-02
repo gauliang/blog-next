@@ -12,7 +12,6 @@ fi
 
 echo "[deploy] 构建静态站点..."
 npm run build
-npm run export
 
 echo "[deploy] 同步静态文件到子模块..."
 rm -rf "$SUBMODULE_DIR/_next/"

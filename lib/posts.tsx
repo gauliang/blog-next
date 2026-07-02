@@ -6,7 +6,7 @@ import remarkGfm from 'remark-gfm'
 import glob from "glob"
 import prism from 'remark-prism';
 import { unified } from "unified";
-import remarkParse from "remark-parse/lib";
+import remarkParse from "remark-parse";
 import { generateHeadingId, generateToc, remarkCodepen, remarkImage } from './remark-plugins'
 import config from '../lib/config.json'
 
@@ -53,13 +53,15 @@ export async function getPostData(id: any) {
 
     const contentHtml = htmlTransform(processedContent.toString())
 
-    return {
+    const result = {
         id,
         contentHtml,
         words: matterResult.content.replace(/\s/gm,'').length,
         toc: processedContent.data.toc,
         ...JSON.parse(JSON.stringify(matterResult.data)),
-    };
+    }
+
+    return result
 }
 
 export function getAllFrontMatterByType(type = 'all'): any[] {

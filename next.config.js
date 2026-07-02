@@ -1,12 +1,15 @@
-const path = require('path')
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')]
-  },
-  trailingSlash: true
+  trailingSlash: true,
+  outputFileTracingRoot: __dirname,
+  images: {
+    unoptimized: true
+  }
+}
+
+if (process.env.NODE_ENV !== 'development') {
+  nextConfig.output = 'export'
 }
 
 module.exports = nextConfig

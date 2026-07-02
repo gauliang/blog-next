@@ -1,4 +1,3 @@
-import { Params } from 'next/dist/server/router'
 import Head from 'next/head'
 
 import Layout from '../../components/layout'
@@ -8,12 +7,12 @@ import { PostList } from '../../components/post-list'
 import { HeroBanner } from '../../components/hero-banner'
 import {upperCaseFirst} from 'upper-case-first'
 
-const Page = ({ series }: Params) => {
+const Page = ({ series }: { series: any }) => {
 
     return (
         <Layout>
             <Head>
-                <title>{upperCaseFirst(series.title)} - Series - Gauliang</title>
+                <title>{`${upperCaseFirst(series.title)} - Series - Gauliang`}</title>
             </Head>
 
             <HeroBanner title={upperCaseFirst(series.title)} abstract={series.description} tag={`${series.count} 篇`} />
@@ -30,7 +29,7 @@ const Page = ({ series }: Params) => {
 
 export default Page
 
-export async function getStaticProps({ params }: Params) {
+export async function getStaticProps({ params }: { params: any }) {
 
     const allSeries = getAllSeriesWithPost()
     

@@ -1,25 +1,22 @@
-import { Params } from 'next/dist/server/router'
 import Head from 'next/head'
 
 import Layout from '../components/layout'
 import { getAllTags } from '../lib/posts'
 import { BackToTop } from '../components/back-to-top'
 import { HeroBanner } from '../components/hero-banner'
-import Link from 'next/dist/client/link'
+import Link from 'next/link'
 
-const Tags = ({ tags, tagsByFirstLetter }: Params) => {
+const Tags = ({ tags, tagsByFirstLetter }: { tags: any[]; tagsByFirstLetter: any[] }) => {
 
     const listByLetter = tagsByFirstLetter.map((item: any) => {
         return <div key={item.title} className='pb-8 md:pb-16'>
             <h3 className='text-2xl md:text-4xl  text-blue-500'>{item.title}</h3>
             <div className='mt-2'>
                 {item.tags.map((tag: any) => {
-                    return <Link key={tag.name} href={{ pathname: `/tags/${tag.name}` }}>
-                        <a className='block md:mt-3'>
+                    return <Link key={tag.name} href={`/tags/${tag.name}`} className='block md:mt-3'>
                             {tag.title}
                             <span className='opacity-50 text-sm ml-2 align-top'>{tag.count}</span>
-                        </a>
-                    </Link>
+                        </Link>
                 })}
             </div>
         </div>
@@ -45,7 +42,7 @@ const Tags = ({ tags, tagsByFirstLetter }: Params) => {
 
 export default Tags
 
-export async function getStaticProps({ params }: Params) {
+export async function getStaticProps({ params }: { params: any }) {
     const tags = getAllTags()
     const _tagsByFirstLetter: any = {}
 

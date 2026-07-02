@@ -1,8 +1,7 @@
 import dayjs from "dayjs"
-import { Params } from "next/dist/server/router"
 import Link from "next/link"
 
-export function PostList({ posts }: Params) {
+export function PostList({ posts }: { posts: any[] }) {
 
     return <ul className='divide-y divide-gray-200 dark:divide-gray-700'>
         {posts.map((post: any) => {
@@ -20,20 +19,16 @@ export function PostList({ posts }: Params) {
                                 <div className="space-y-3 md:space-y-6">
                                     <div>
                                         <h2 className="text-lg md:text-3xl font-bold leading-8 tracking-tight">
-                                            <Link href={{ pathname: `${post.path}` }}>
-                                                <a className="text-gray-900 dark:text-gray-100">
+                                            <Link href={post.path} className="text-gray-900 dark:text-gray-100">
                                                     {post.title}
-                                                </a>
-                                            </Link>
+                                                </Link>
                                         </h2>
                                         <div className="flex flex-wrap">
                                             {post.tags && post.tags.map((tag: string) => {
                                                 return (
-                                                    <Link key={tag} href={{ pathname: `/tags/${tag}` }}>
-                                                        <a className="mr-3 mt-2 md:mt-3 text-sm font-light md:uppercase text-blue-500 dark:text-blue-500 dark:hover:underline hover:text-blue-900">
+                                                    <Link key={tag} href={`/tags/${tag}`} className="mr-3 mt-2 md:mt-3 text-sm font-light md:uppercase text-blue-500 dark:text-blue-500 dark:hover:underline hover:text-blue-900">
                                                             {tag}
-                                                        </a>
-                                                    </Link>
+                                                        </Link>
                                                 )
                                             })}
                                         </div>
@@ -43,9 +38,7 @@ export function PostList({ posts }: Params) {
                                     </div>
                                 </div>
                                 <div className="text-base font-light leading-6 ">
-                                    <Link href={{ pathname: `${post.path}` }}>
-                                        <a className="text-primary-500 hover:text-primary-600 text-blue-500 hover:text-blue-900 dark:hover:text-blue-500 dark:hover:underline">Read more →</a>
-                                    </Link>
+                                    <Link href={post.path} className="text-primary-500 hover:text-primary-600 text-blue-500 hover:text-blue-900 dark:hover:text-blue-500 dark:hover:underline">Read more →</Link>
                                 </div>
                             </div>
                         </div>

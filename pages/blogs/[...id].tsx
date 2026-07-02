@@ -1,4 +1,3 @@
-import { Params } from 'next/dist/server/router'
 import Head from 'next/head'
 import Layout from '../../components/layout'
 import { getAllFrontMatterByType, getAllPostIdByType, getPostData } from '../../lib/posts'
@@ -8,7 +7,7 @@ import { useEffect, useState } from 'react'
 import { HotLoad } from '../../components/hot-load'
 
 
-const Post = ({ id, post, prev, next }: Params) => {
+const Post = ({ id, post, prev, next }: { id: any; post: any; prev: any; next: any }) => {
     const [postData, setPostData] = useState(post)
     
     useEffect(()=>{
@@ -18,7 +17,7 @@ const Post = ({ id, post, prev, next }: Params) => {
     return (
         <Layout>
             <Head>
-                <title>{postData.title} - Gauliang</title>
+                <title>{`${postData.title} - Gauliang`}</title>
             </Head>
             <PostContent post={postData} prev={prev} next={next} />
             <BackToTop />
@@ -29,7 +28,7 @@ const Post = ({ id, post, prev, next }: Params) => {
 
 export default Post
 
-export async function getStaticProps({ params }: Params) {
+export async function getStaticProps({ params }: { params: any }) {
     const slug = params.id.join('/')
     const id = ['posts', ...params.id]
     const post = await getPostData(id)

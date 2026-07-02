@@ -1,40 +1,33 @@
 import dayjs from "dayjs";
-import { Params } from "next/dist/server/router";
 import Link from "next/link";
 import { BsArrowLeft, BsArrowRight, BsInfoCircle } from "react-icons/bs";
 import { PostContentArticle } from "./post-content-article";
 import { PostContentToc } from "./post-content-toc";
 
-export function PostContent({ post, prev, next }: Params) {
+export function PostContent({ post, prev, next }: { post: any; prev: any; next: any }) {
 
     const tags = post.tags && post.tags.map((tag: string) => {
-        return <Link key={tag} href={{ pathname: `/tags/${tag}` }}>
-            <a key={tag} className='mr-4 hover:underline'>{tag.toUpperCase()}</a>
-        </Link>
+        return <Link key={tag} href={`/tags/${tag}`} className='mr-4 hover:underline'>{tag.toUpperCase()}</Link>
     })
 
     const prevLink = prev ? (
-        <Link href={{ pathname: prev.path }}>
-            <a className="prev-post">
+        <Link href={prev.path} className="prev-post">
                 <BsArrowLeft />
                 <div className="text">
                     <div className="caption">{dayjs(prev.date).format('YYYY-MM-DD HH:mm:ss')}</div>
                     <div className="title">{prev.title}</div>
                 </div>
-            </a>
-        </Link>
+            </Link>
     ) : <div></div>
 
     const nextLink = next ? (
-        <Link href={{ pathname: next.path }}>
-            <a className="next-post">
+        <Link href={next.path} className="next-post">
                 <div className="text">
                     <div className="caption">{dayjs(next.date).format('YYYY-MM-DD HH:mm:ss')}</div>
                     <div className="title">{next.title}</div>
                 </div>
                 <BsArrowRight />
-            </a>
-        </Link>
+            </Link>
     ) : ''
 
     return <div className='mx-5 xl:mx-10 flex flex-row md:space-x-8'>

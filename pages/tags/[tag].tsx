@@ -1,4 +1,3 @@
-import { Params } from 'next/dist/server/router'
 import Head from 'next/head'
 
 import Layout from '../../components/layout'
@@ -8,12 +7,12 @@ import { PostList } from '../../components/post-list'
 import { HeroBanner } from '../../components/hero-banner'
 import {upperCaseFirst} from 'upper-case-first'
 
-const Page = ({ posts, total, tag }: Params) => {
+const Page = ({ posts, total, tag }: { posts: any[]; total: number; tag: string }) => {
 
     return (
         <Layout>
             <Head>
-                <title>{upperCaseFirst(tag)} - Tags - Gauliang</title>
+                <title>{`${upperCaseFirst(tag)} - Tags - Gauliang`}</title>
             </Head>
 
             <HeroBanner title={upperCaseFirst(tag)} abstract='不积跬步，无以致千里；不积小流，无以成江海。' tag={`${total} 个`} />
@@ -30,7 +29,7 @@ const Page = ({ posts, total, tag }: Params) => {
 
 export default Page
 
-export async function getStaticProps({ params }: Params) {
+export async function getStaticProps({ params }: { params: any }) {
 
     const allTags = getAllTags()
     const posts = allTags.find(tag => {

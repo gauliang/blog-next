@@ -1,4 +1,3 @@
-import { Params } from 'next/dist/server/router'
 import Head from 'next/head'
 
 import Layout from '../../../components/layout'
@@ -9,7 +8,7 @@ import { PAGE_SIZE } from '../../../lib/snippets'
 import { Pagination } from '../../../components/post-pagination'
 import { HeroBanner } from '../../../components/hero-banner'
 
-const Page = ({ posts, pageSize, total, pageNumber }: Params) => {
+const Page = ({ posts, pageSize, total, pageNumber }: { posts: any[]; pageSize: number; total: number; pageNumber: number }) => {
 
     return (
         <Layout>
@@ -34,7 +33,7 @@ const Page = ({ posts, pageSize, total, pageNumber }: Params) => {
 
 export default Page
 
-export async function getStaticProps({ params }: Params) {
+export async function getStaticProps({ params }: { params: any }) {
 
     const allPosts = getAllFrontMatterByType()
     const pageSize = PAGE_SIZE;

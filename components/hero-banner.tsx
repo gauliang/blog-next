@@ -1,6 +1,4 @@
-import { Params } from "next/dist/server/router";
-
-export function HeroBanner({ title, abstract, tag, center }: Params) {
+export function HeroBanner({ title, abstract, tag, center }: { title?: string; abstract?: string; tag?: string; center?: boolean }) {
     return <div className="
         mx-0 md:mx-20 py-8 md:py-16 space-y-2 md:space-y-5 md:border-b border-gray-200 dark:border-gray-700
       bg-slate-100 dark:bg-slate-900/50 md:px-0 px-5 md:bg-transparent md:dark:bg-transparent

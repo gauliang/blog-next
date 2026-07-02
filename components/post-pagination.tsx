@@ -1,29 +1,28 @@
-import { Params } from "next/dist/server/router";
 import Link from "next/link";
 import { BsArrowLeftSquare, BsArrowRightSquare } from "react-icons/bs";
 
-export function Pagination({ pageSize, total, pageNumber }: Params) {
+export function Pagination({ pageSize, total, pageNumber }: { pageSize: number; total: number; pageNumber: number }) {
 
     const totalPage = Math.ceil(total / pageSize)
 
-    const previousInner = <a className={`flex flex-row space-x-4 pt-2 border-r dark:border-slate-700 transition-all hover:pl-5  hover:text-blue-500 hover:bg-blue-50/50 dark:hover:bg-blue-500/10 hover:rounded-md ${pageNumber < 2 ? 'pointer-events-none opacity-20' : ''}`}>
+    const previousInner = <div className={`flex flex-row space-x-4 pt-2 border-r dark:border-slate-700 transition-all hover:pl-5  hover:text-blue-500 hover:bg-blue-50/50 dark:hover:bg-blue-500/10 hover:rounded-md ${pageNumber < 2 ? 'pointer-events-none opacity-20' : ''}`}>
         <div className='mt-1'><BsArrowLeftSquare /></div>
         <div className='flex flex-col text-right'>
             <span>上一页</span>
             <span className='text-xs opacity-50'>Previous</span>
         </div>
-    </a>
+    </div>
 
-    const nextInner = <a className={`flex flex-row justify-end pt-2 space-x-4 px-2 border-l dark:border-slate-700 transition-all hover:pr-5 hover:text-blue-500 hover:bg-blue-50/50 dark:hover:bg-blue-500/10 hover:rounded-md ${pageNumber >= totalPage ? 'pointer-events-none opacity-20' : ''}`}>
+    const nextInner = <div className={`flex flex-row justify-end pt-2 space-x-4 px-2 border-l dark:border-slate-700 transition-all hover:pr-5 hover:text-blue-500 hover:bg-blue-50/50 dark:hover:bg-blue-500/10 hover:rounded-md ${pageNumber >= totalPage ? 'pointer-events-none opacity-20' : ''}`}>
         <div className='flex flex-col text-right'>
             <span>下一页</span>
             <span className='text-xs opacity-50'>Next</span>
         </div>
         <div className='mt-1'><BsArrowRightSquare /></div>
-    </a>
+    </div>
 
-    const previous = pageNumber > 1 ? <Link href={{ pathname: `/blogs/page/${+pageNumber - 1}` }}>{previousInner}</Link> : previousInner
-    const next = pageNumber < totalPage ? <Link href={{ pathname: `/blogs/page/${+pageNumber + 1}` }}>{nextInner}</Link> : nextInner
+    const previous = pageNumber > 1 ? <Link href={`/blogs/page/${+pageNumber - 1}`}>{previousInner}</Link> : previousInner
+    const next = pageNumber < totalPage ? <Link href={`/blogs/page/${+pageNumber + 1}`}>{nextInner}</Link> : nextInner
 
     return <nav className="grid grid-cols-3 border-t dark:border-gray-700 py-8 transition-all">
         {previous}

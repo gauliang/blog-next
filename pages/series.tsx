@@ -3,11 +3,10 @@ import Layout from '../components/layout'
 import { BackToTop } from '../components/back-to-top'
 import { HeroBanner } from '../components/hero-banner'
 import { BsBrightnessAltHigh, BsHeartFill } from 'react-icons/bs'
-import { Params } from 'next/dist/server/router'
 import Link from 'next/link'
 import { getAllSeriesWithPost } from '../lib/posts'
 
-const Series = ({ series }: Params) => {
+const Series = ({ series }: { series: any[] }) => {
 
     const seriesElements = series.map((item: any) => {
         return <div className="w-full sm:w-1/2 px-4 " key={item.name}>
@@ -27,17 +26,15 @@ const Series = ({ series }: Params) => {
                             </div>
                         </div>
                         <div className="w-full flex-none mt-2 order-1 text-3xl font-bold text-violet-600 dark:text-white">
-                            <Link key={item.name} href={{ pathname: `/series/${item.name}` }}>{item.title}</Link>
+                            <Link key={item.name} href={`/series/${item.name}`}>{item.title}</Link>
                         </div>
                     </div>
                     <div className="flex items-baseline mb-6 pb-6 border-b border-slate-200 dark:border-slate-600"></div>
                     <div className="flex space-x-4 mb-5 text-sm font-medium">
                         <div className="flex-auto flex space-x-4">
-                            <Link key={item.name} href={{ pathname: `/series/${item.name}` }}>
-                                <button className="h-10 px-6 font-semibold rounded-full bg-violet-600 text-white" type="submit">
+                            <Link key={item.name} href={`/series/${item.name}`} className="inline-block h-10 px-6 font-semibold rounded-full bg-violet-600 text-white leading-10">
                                     开始学习
-                                </button>
-                            </Link>
+                                </Link>
                             <button className="h-10 px-6 font-semibold rounded-full border border-slate-200 text-slate-900 dark:text-white" type="button">
                                 主题介绍
                             </button>
