@@ -47,14 +47,15 @@ export async function getStaticProps({ params }: { params: any }) {
     const _tagsByFirstLetter: any = {}
 
     tags.forEach(item => {
+        const light = { name: item.name, title: item.title, count: item.count }
         let fl = item.title.substring(0, 1)
         if (/[a-zA-Z0-9]/.test(fl) === false) {
             fl = 'Zh'
         }
         if (_tagsByFirstLetter[fl]) {
-            _tagsByFirstLetter[fl].tags.push(item)
+            _tagsByFirstLetter[fl].tags.push(light)
         } else {
-            _tagsByFirstLetter[fl] = { title: fl, tags: [item] }
+            _tagsByFirstLetter[fl] = { title: fl, tags: [light] }
         }
     })
 
@@ -64,7 +65,7 @@ export async function getStaticProps({ params }: { params: any }) {
 
     return {
         props: {
-            tags,
+            tags: tagsByFirstLetter.flatMap((g: any) => g.tags),
             tagsByFirstLetter
         }
     }
