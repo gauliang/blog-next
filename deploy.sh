@@ -5,7 +5,7 @@ SUBMODULE_DIR="$ROOT_DIR/gauliang.github.io"
 TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
 
 # 检查子模块是否存在且已初始化
-if [ ! -d "$SUBMODULE_DIR/.git" ]; then
+if [ ! -e "$SUBMODULE_DIR/.git" ]; then
     echo "[deploy] 初始化子模块..."
     git submodule update --init --recursive
 fi
@@ -14,8 +14,7 @@ echo "[deploy] 构建静态站点..."
 npm run build
 
 echo "[deploy] 同步静态文件到子模块..."
-rm -rf "$SUBMODULE_DIR/_next/"
-cp -rf out/ "$SUBMODULE_DIR/"
+rsync -a --delete --exclude='.git' out/ "$SUBMODULE_DIR/"
 
 cd "$SUBMODULE_DIR"
 

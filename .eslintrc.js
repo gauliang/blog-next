@@ -7,6 +7,8 @@ module.exports = {
   rules: {
     '@next/next/no-img-element': 'off',
     '@next/next/no-page-custom-font': 'off',
+    '@next/next/no-head-import-in-document': 'off',
+    '@next/next/no-duplicate-head': 'off',
     '@next/next/no-html-link-for-pages': ['error', pagesDir]
   },
   settings: {
